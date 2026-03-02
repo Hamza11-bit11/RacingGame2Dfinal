@@ -2,3 +2,4 @@
 
 [resource]
 Button/font_sizes/font_size = 80
+Button/fonts/font = null

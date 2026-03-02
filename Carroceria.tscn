@@ -7,12 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://bi8fqjwoal1cq" path="res://ruedas_atras.tscn" id="5_qs73i"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qs73i"]
-bounce = 0.6
+bounce = 0.3
 
 [sub_resource type="GDScript" id="GDScript_60s60"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mkugs"]
-bounce = 0.5
+bounce = 0.3
 
 [node name="jugador" type="RigidBody2D" unique_id=1350755844 groups=["jugador"]]
 position = Vector2(0, 995)
@@ -27,8 +27,9 @@ texture = ExtResource("1_pi76j")
 
 [node name="RuedaAdelante" parent="CollisionPolygon2D" unique_id=2129602004 groups=["ruedas"] instance=ExtResource("4_60s60")]
 position = Vector2(-348, -115)
+mass = 2.5
 physics_material_override = SubResource("PhysicsMaterial_qs73i")
-gravity_scale = 2.0
+gravity_scale = 3.0
 
 [node name="PinTrasera2" type="PinJoint2D" parent="CollisionPolygon2D/RuedaAdelante" unique_id=572170331]
 position = Vector2(567, 236)
@@ -47,8 +48,9 @@ script = SubResource("GDScript_60s60")
 
 [node name="RuedasAtras" parent="CollisionPolygon2D" unique_id=307590859 groups=["ruedas"] instance=ExtResource("5_qs73i")]
 position = Vector2(-429, -39)
+mass = 2.5
 physics_material_override = SubResource("PhysicsMaterial_mkugs")
-gravity_scale = 2.0
+gravity_scale = 3.0
 
 [node name="PinTrasera" type="PinJoint2D" parent="CollisionPolygon2D/RuedasAtras" unique_id=1959124566]
 position = Vector2(203, 169)
