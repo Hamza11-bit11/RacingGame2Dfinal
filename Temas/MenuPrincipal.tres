@@ -1,5 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://bjkk76vhmdm1k"]
 
 [resource]
+Button/constants/h_separation = 4
 Button/font_sizes/font_size = 80
 Button/fonts/font = null

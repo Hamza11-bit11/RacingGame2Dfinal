@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c05gfkkedx3rh"]
+
+[ext_resource type="Texture2D" uid="uid://cbendsis4w0f1" path="res://Temas/grok-image-d5563f7b-2a62-4f66-827a-bb9c7806c9c2.jpeg" id="1_crmre"]
+[ext_resource type="Texture2D" uid="uid://cifsf0lgo0ltn" path="res://Adobe Express - file.png" id="2_0jnl8"]
+
+[node name="Node2D" type="Sprite2D" unique_id=1216008972]
+
+[node name="GrokImageD5563f7b2a624f66827aBb9c7806c9c2" type="Sprite2D" parent="." unique_id=1788999635]
+position = Vector2(576, 275)
+texture = ExtResource("1_crmre")
+
+[node name="AdobeExpressFile" type="Sprite2D" parent="." unique_id=1983947168]
+position = Vector2(921.99994, 364)
+scale = Vector2(0.40277755, 0.43194452)
+texture = ExtResource("2_0jnl8")
