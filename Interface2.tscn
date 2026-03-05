@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://emdu0puufm70"]
+
+[ext_resource type="Script" uid="uid://crbixx6c38nak" path="res://interface.gd" id="1_o57g1"]
+[ext_resource type="Texture2D" uid="uid://byblykiofflmx" path="res://Interfaces/Nivel 2 interface.jpg" id="2_772t6"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_kyn48"]
+allow_unpress = true
+
+[node name="Niveles" type="Control" unique_id=1821943559]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 19.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o57g1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=183848932]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1238255956]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.0
+offset_top = -35.0
+offset_right = -318.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=950737340]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_kyn48")
+text = "LEVELS
+5
+5
+5
+
+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=528785760]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 290.0
+offset_right = 460.0
+offset_bottom = 376.0
+
+[node name="Button2" type="Button" parent="VBoxContainer2" unique_id=1711234662]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_kyn48")
+text = "LEVELS
+s
+s
+s
+"
+
+[node name="Nivel2Interface" type="Sprite2D" parent="." unique_id=1683808091]
+position = Vector2(584, 343)
+scale = Vector2(0.936, 0.822)
+texture = ExtResource("2_772t6")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Button2" to="." method="_on_button_2_pressed"]

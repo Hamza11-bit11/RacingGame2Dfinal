@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://c05gfkkedx3rh"]
+[gd_scene format=3 uid="uid://c05gfkkedx3rh"]
 
 [ext_resource type="Texture2D" uid="uid://cifsf0lgo0ltn" path="res://Adobe Express - file.png" id="2_0jnl8"]
 [ext_resource type="Texture2D" uid="uid://v66wa21nk1u8" path="res://Imagen victoria buena.jpg" id="3_7j8c7"]
 
-[node name="Node2D" type="Sprite2D"]
+[node name="Node2D" type="Sprite2D" unique_id=1917351898]
 
-[node name="ImagenVictoriaBuena" type="Sprite2D" parent="."]
+[node name="ImagenVictoriaBuena" type="Sprite2D" parent="." unique_id=958971631]
 position = Vector2(573.00006, 322.5)
 scale = Vector2(1.1425781, 0.66765875)
 texture = ExtResource("3_7j8c7")
 
-[node name="AdobeExpressFile" type="Sprite2D" parent="."]
+[node name="AdobeExpressFile" type="Sprite2D" parent="." unique_id=640618877]
 position = Vector2(669, 418.99997)
 scale = Vector2(0.3493053, 0.26076388)
 texture = ExtResource("2_0jnl8")
