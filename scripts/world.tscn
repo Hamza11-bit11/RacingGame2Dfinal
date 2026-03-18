@@ -1,17 +1,16 @@
 [gd_scene format=4 uid="uid://cmw7x7yc21ck0"]
 
-[ext_resource type="Texture2D" uid="uid://d4b5ulxhg1yds" path="res://Parallax/parallax-00.png" id="1_dwbse"]
-[ext_resource type="PackedScene" uid="uid://c1serxxj2dyph" path="res://Carroceria.tscn" id="1_f3sb7"]
-[ext_resource type="Texture2D" uid="uid://cjka1se4x80hn" path="res://Parallax/parallax-01.png" id="2_pkg7o"]
-[ext_resource type="Texture2D" uid="uid://q0dnttxs8fr3" path="res://Parallax/parallax-02.png" id="3_gbfbk"]
-[ext_resource type="Texture2D" uid="uid://dvl32iexknud6" path="res://Parallax/parallax-03.png" id="4_ioo17"]
-[ext_resource type="Texture2D" uid="uid://ddwiv0kuujj5b" path="res://suelo/Captura de pantalla de 2026-01-21 12-12-04.png" id="7_gbfbk"]
-[ext_resource type="Texture2D" uid="uid://ckhg3le148o5i" path="res://suelo/tileset_snow.png" id="7_pkg7o"]
-[ext_resource type="Texture2D" uid="uid://36bas7w4ps4t" path="res://finish.png" id="8_gbfbk"]
-[ext_resource type="Texture2D" uid="uid://5pnwd5wgyaaw" path="res://Texturas/pixel-art-wooden-sign-with-indicative-arrow-8bit-game-item-on-white-background-vector.png" id="9_ioo17"]
-[ext_resource type="Script" uid="uid://bellpl1ba8kep" path="res://area_2d.gd" id="9_wse8f"]
-[ext_resource type="Texture2D" uid="uid://cifsf0lgo0ltn" path="res://Adobe Express - file.png" id="11_ic0uy"]
-[ext_resource type="PackedScene" uid="uid://bs0a4r0mc78xu" path="res://node_2d.tscn" id="12_k3n1d"]
+[ext_resource type="PackedScene" uid="uid://de7c4wm8jgi1s" path="res://diamante.tscn" id="1_o88w5"]
+[ext_resource type="Texture2D" uid="uid://d4b5ulxhg1yds" path="res://Parallax/parallax-00.png" id="2_pledc"]
+[ext_resource type="Texture2D" uid="uid://cjka1se4x80hn" path="res://Parallax/parallax-01.png" id="3_j3lq4"]
+[ext_resource type="Texture2D" uid="uid://q0dnttxs8fr3" path="res://Parallax/parallax-02.png" id="4_ck6fg"]
+[ext_resource type="Texture2D" uid="uid://dvl32iexknud6" path="res://Parallax/parallax-03.png" id="5_whh4i"]
+[ext_resource type="PackedScene" uid="uid://c1serxxj2dyph" path="res://Carroceria.tscn" id="6_71i6y"]
+[ext_resource type="Texture2D" uid="uid://ckhg3le148o5i" path="res://suelo/tileset_snow.png" id="7_3f6h1"]
+[ext_resource type="Texture2D" uid="uid://ddwiv0kuujj5b" path="res://suelo/Captura de pantalla de 2026-01-21 12-12-04.png" id="8_lhsfa"]
+[ext_resource type="Texture2D" uid="uid://36bas7w4ps4t" path="res://finish.png" id="9_8bvd1"]
+[ext_resource type="Script" uid="uid://bellpl1ba8kep" path="res://area_2d.gd" id="10_2gqin"]
+[ext_resource type="Texture2D" uid="uid://5pnwd5wgyaaw" path="res://Texturas/pixel-art-wooden-sign-with-indicative-arrow-8bit-game-item-on-white-background-vector.png" id="11_c278u"]
 
 [sub_resource type="GDScript" id="GDScript_aqk2v"]
 script/source = "extends Node2D
@@ -21,13 +20,15 @@ func _on_button_pressed() -> void:
 
 func _on_area_2d_body_entered(body):
 	get_tree().change_scene_to_file(\"res://Interface2.tscn\")
-	
+
+func _process(delta: float) -> void:
+	$Label.text = str(\"Diamantes: \", RayanGay.Diamantes)
 "
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f3sb7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ioo17"]
-texture = ExtResource("7_pkg7o")
+texture = ExtResource("7_3f6h1")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -67,8 +68,57 @@ sources/0 = SubResource("TileSetAtlasSource_ioo17")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ioo17"]
 size = Vector2(481, 227)
 
+[sub_resource type="FontFile" id="FontFile_o88w5"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+
 [node name="world" type="Node2D" unique_id=1278374929]
 script = SubResource("GDScript_aqk2v")
+
+[node name="Diamante8" parent="." unique_id=2001567652 instance=ExtResource("1_o88w5")]
+position = Vector2(35492, 348.00003)
+scale = Vector2(10, 10)
+
+[node name="Diamante7" parent="." unique_id=934210148 instance=ExtResource("1_o88w5")]
+position = Vector2(45130, 10635.001)
+scale = Vector2(10, 10)
+
+[node name="Diamante6" parent="." unique_id=761358461 instance=ExtResource("1_o88w5")]
+position = Vector2(46843, 12074)
+scale = Vector2(10, 10)
+
+[node name="Diamante4" parent="." unique_id=2046338471 instance=ExtResource("1_o88w5")]
+position = Vector2(28010, 337)
+scale = Vector2(9.999999, 9.999999)
+
+[node name="Diamante" parent="." unique_id=984584641 instance=ExtResource("1_o88w5")]
+position = Vector2(3079, 337)
+scale = Vector2(10, 10)
+
+[node name="Diamante3" parent="." unique_id=95725361 instance=ExtResource("1_o88w5")]
+position = Vector2(365614.03, 6517)
+scale = Vector2(100, 100)
+
+[node name="Diamante2" parent="." unique_id=1244292314 instance=ExtResource("1_o88w5")]
+position = Vector2(10691.999, 2617)
+scale = Vector2(10, 10)
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="." unique_id=1275975687]
 
@@ -77,18 +127,18 @@ motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(1770, 600)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer4" unique_id=1452904828]
-position = Vector2(4317, 1825.3751)
+position = Vector2(4692.0005, 2135)
 scale = Vector2(11.918056, 22.364582)
-texture = ExtResource("1_dwbse")
+texture = ExtResource("2_pledc")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground2" unique_id=186856286]
 motion_scale = Vector2(0.3, 0)
 motion_mirroring = Vector2(500000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer3" unique_id=609685818]
-position = Vector2(9565.5, 2828)
+position = Vector2(9429, 2848)
 scale = Vector2(19.154861, 19.016666)
-texture = ExtResource("2_pkg7o")
+texture = ExtResource("3_j3lq4")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2" unique_id=1636500550]
 motion_scale = Vector2(0, 0)
@@ -97,7 +147,7 @@ motion_mirroring = Vector2(1770, 600)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer2" unique_id=351857630]
 position = Vector2(6248.5005, 2290.7502)
 scale = Vector2(14.597916, 19.295834)
-texture = ExtResource("3_gbfbk")
+texture = ExtResource("4_ck6fg")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2" unique_id=1249753102]
 motion_scale = Vector2(0.8, 0)
@@ -106,15 +156,11 @@ motion_mirroring = Vector2(50000, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer" unique_id=907572711]
 position = Vector2(21157.25, 1549)
 scale = Vector2(35.346878, 20.169445)
-texture = ExtResource("4_ioo17")
+texture = ExtResource("5_whh4i")
 
-[node name="jugador" parent="." unique_id=14217646 instance=ExtResource("1_f3sb7")]
+[node name="jugador" parent="." unique_id=14217646 instance=ExtResource("6_71i6y")]
 top_level = true
 position = Vector2(-116, -260)
-
-[node name="Chatarra11" type="Sprite2D" parent="jugador" unique_id=2121765315]
-position = Vector2(-3150, -1654)
-texture = ExtResource("11_ic0uy")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1890447459]
 physics_material_override = SubResource("PhysicsMaterial_f3sb7")
@@ -155,19 +201,19 @@ polygon = PackedVector2Array(8998, 2887, 19470, 2896, 19982, 2585, 23358, 629, 2
 position = Vector2(21470.068, 1910.293)
 rotation = -0.52534413
 scale = Vector2(5.9123597, 4.557148)
-texture = ExtResource("7_gbfbk")
+texture = ExtResource("8_lhsfa")
 
 [node name="Rampa captura arriba" type="Sprite2D" parent="Floor" unique_id=590908861]
 position = Vector2(21076.168, 154.82358)
 rotation = -0.52534413
 scale = Vector2(6.660682, 4.557148)
-texture = ExtResource("7_gbfbk")
+texture = ExtResource("8_lhsfa")
 
 [node name="Rampa captura arriba2" type="Sprite2D" parent="Floor" unique_id=1691716574]
 position = Vector2(25448.563, -2402.9822)
 rotation = -0.52534413
 scale = Vector2(6.6947293, 4.557148)
-texture = ExtResource("7_gbfbk")
+texture = ExtResource("8_lhsfa")
 
 [node name="Abajo suelo" type="CollisionPolygon2D" parent="Floor" unique_id=1839796233]
 visible = false
@@ -184,11 +230,11 @@ polygon = PackedVector2Array(48237, -3806, 48158, -3550, 50256, -3540, 50286, -1
 
 [node name="Finish" type="Sprite2D" parent="." unique_id=550975640]
 position = Vector2(49639, 13240)
-texture = ExtResource("8_gbfbk")
+texture = ExtResource("9_8bvd1")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1064952920]
 position = Vector2(48211, 13429)
-script = ExtResource("9_wse8f")
+script = ExtResource("10_2gqin")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1030239272]
 position = Vector2(1425.5, -274.5)
@@ -197,14 +243,19 @@ shape = SubResource("RectangleShape2D_ioo17")
 [node name="PixelArtWoodenSignWithIndicativeArrow8BitGameItemOnWhiteBackgroundVector" type="Sprite2D" parent="." unique_id=943947024]
 position = Vector2(8762, 2644)
 scale = Vector2(0.5470038, 0.52551025)
-texture = ExtResource("9_ioo17")
+texture = ExtResource("11_c278u")
 
 [node name="PixelArtWoodenSignWithIndicativeArrow8BitGameItemOnWhiteBackgroundVector" type="Sprite2D" parent="PixelArtWoodenSignWithIndicativeArrow8BitGameItemOnWhiteBackgroundVector" unique_id=2099055364]
 position = Vector2(28749.053, -4166.123)
 scale = Vector2(0.74396497, 0.7792599)
-texture = ExtResource("9_ioo17")
+texture = ExtResource("11_c278u")
 
-[node name="Node2D" parent="." unique_id=984584641 instance=ExtResource("12_k3n1d")]
-position = Vector2(3014, 187)
+[node name="Label" type="Label" parent="." unique_id=1244687091]
+offset_left = -589.0
+offset_top = -266.0
+offset_right = -428.0
+offset_bottom = -202.0
+theme_override_fonts/font = SubResource("FontFile_o88w5")
+theme_override_font_sizes/font_size = 100
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
