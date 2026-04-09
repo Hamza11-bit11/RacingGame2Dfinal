@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bellpl1ba8kep" path="res://area_2d.gd" id="10_2gqin"]
 [ext_resource type="Texture2D" uid="uid://5pnwd5wgyaaw" path="res://Texturas/pixel-art-wooden-sign-with-indicative-arrow-8bit-game-item-on-white-background-vector.png" id="11_c278u"]
 [ext_resource type="Script" uid="uid://xor651st6j1e" path="res://camera_2d.gd" id="12_pledc"]
+[ext_resource type="Texture2D" uid="uid://cjw5fky13kmue" path="res://suelo/Trampaw1.png" id="13_j3lq4"]
 
 [sub_resource type="GDScript" id="GDScript_aqk2v"]
 script/source = "extends Node2D
@@ -86,7 +87,7 @@ position = Vector2(45130, 10635.001)
 scale = Vector2(10, 10)
 
 [node name="Diamante6" parent="." unique_id=761358461 instance=ExtResource("1_o88w5")]
-position = Vector2(46843, 12074)
+position = Vector2(48213.004, 12117)
 scale = Vector2(10, 10)
 
 [node name="Diamante4" parent="." unique_id=2046338471 instance=ExtResource("1_o88w5")]
@@ -250,5 +251,11 @@ texture = ExtResource("11_c278u")
 position = Vector2(28749.053, -4166.123)
 scale = Vector2(0.74396497, 0.7792599)
 texture = ExtResource("11_c278u")
+
+[node name="Trampaw1" type="Sprite2D" parent="." unique_id=637216281]
+position = Vector2(46929, 12902)
+rotation = 1.5707964
+scale = Vector2(3.9725275, 10.845589)
+texture = ExtResource("13_j3lq4")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
