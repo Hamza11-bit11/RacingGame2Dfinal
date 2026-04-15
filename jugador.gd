@@ -25,12 +25,15 @@ var ventana_tap = 0.25
 # READY
 # =====================
 func _ready():
+	# Asegúrate de que tus ruedas estén en el grupo "ruedas"
 	ruedas = get_tree().get_nodes_in_group("ruedas")
 
 # =====================
 # PHYSICS
 # =====================
 func _physics_process(delta):
+	# Si el coche está congelado (explotó), no procesamos el movimiento
+	if freeze: return
 
 	var right_pressed = Input.is_action_just_pressed("ui_right")
 	var right_hold = Input.is_action_pressed("ui_right")
@@ -97,3 +100,48 @@ func _en_suelo():
 
 func _boca_abajo():
 	return abs(rotation) > PI * 0.5
+
+# =====================
+# SISTEMA DE EXPLOSIÓN
+# =====================
+
+func _on_detector_de_muerte_area_entered(area: Area2D) -> void:
+	if area.is_in_group("trampas"):
+		explotar()
+
+func explotar():
+	if freeze: return
+	
+	print("¡BOOM!")
+
+	# 1. CONGELAR LA CÁMARA EN EL SITIO
+	if has_node("Camera2D"):
+		var cam = $Camera2D
+		var pos_explosion = cam.global_position
+		# La independizamos del coche
+		cam.top_level = true
+		cam.global_position = pos_explosion
+
+	# 2. ACTIVAR LA ANIMACIÓN
+	if has_node("CPUParticles2D"):
+		var p = $CPUParticles2D
+		var pos_p = global_position
+		# La independizamos para que no se mueva con el coche
+		p.top_level = true
+		p.global_position = pos_p
+		p.emitting = true
+		p.restart()
+
+	# 3. EL TRUCO PARA QUE EL COCHE DESAPAREZCA Y NO CAIGA
+	# En lugar de desactivarlo, lo mandamos al "limbo" (muy lejos)
+	# y le quitamos la gravedad poniéndolo en modo estático.
+	freeze = true
+	self.modulate.a = 0 # Invisible
+	self.global_position = Vector2(-9999, -9999) # Lo mandamos lejos del mapa
+
+	# 4. ESPERAR 1.2 SEGUNDOS PARA VER EL FUEGO
+	# Usamos el timer del árbol de escena para evitar errores si el coche se borra
+	await get_tree().create_timer(1.2).timeout
+	
+	# 5. REINICIAR
+	get_tree().reload_current_scene()
