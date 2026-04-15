@@ -114,6 +114,7 @@ texture = ExtResource("4_eiokd")
 [node name="jugador" parent="." unique_id=1632514651 instance=ExtResource("5_ngp3s")]
 top_level = true
 position = Vector2(-104, -415)
+scale = Vector2(1, 1)
 
 [node name="Camera2D2" type="Camera2D" parent="jugador" unique_id=407919300]
 position = Vector2(707, 86)

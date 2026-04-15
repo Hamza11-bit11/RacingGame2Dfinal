@@ -15,7 +15,6 @@ bounce = 0.3
 bounce = 0.3
 
 [node name="jugador" type="RigidBody2D" unique_id=1605844747 groups=["jugador"]]
-position = Vector2(0, 995)
 script = ExtResource("1_b7wwv")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=506560175]

@@ -5,7 +5,7 @@ extends RigidBody2D
 # =====================
 var ruedas = []
 
-var velocidad = 70000          # torque de las ruedas (avance)
+var velocidad = 50000          # torque de las ruedas (avance)
 var torque_aire = 1500000      # control de giro en el aire
 var torque_suelo = 300000      # pequeño giro en el suelo
 

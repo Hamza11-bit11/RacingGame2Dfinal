@@ -62,6 +62,7 @@ shadow_size = 3
 [node name="World3" type="Node2D" unique_id=1173426388]
 
 [node name="floor" type="StaticBody2D" parent="." unique_id=1942118042]
+scale = Vector2(10, 10)
 
 [node name="FondoNegro3" type="Sprite2D" parent="floor" unique_id=1763822934]
 position = Vector2(1292, -48.999992)
@@ -82,22 +83,37 @@ position = Vector2(30, 6)
 polygon = PackedVector2Array(2064, -127, 2080, -113, 2090, -121, 2153, -120, 2159, -129)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="floor" unique_id=611570814]
+visible = false
 position = Vector2(30, 6)
 polygon = PackedVector2Array(2204, -172, 2221, -160, 2239, -172, 2391, -164, 2398, -177)
 
-[node name="jugador" parent="floor/CollisionPolygon2D5" unique_id=1605844747 instance=ExtResource("3_xnej2")]
-top_level = true
-position = Vector2(141, -71)
-scale = Vector2(0.1, 0.1)
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="floor" unique_id=923840236]
+visible = false
+position = Vector2(30, 6)
+polygon = PackedVector2Array(1888, -62, 1904, -46, 1916, -58, 1978, -55, 1984, -62)
 
-[node name="Camera2D2" type="Camera2D" parent="floor/CollisionPolygon2D5/jugador" unique_id=1792872165]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floor" unique_id=408342583]
+visible = false
+polygon = PackedVector2Array(30, -5, 620, -4, 796, 173, 1182, 171, 1263, 92, 1737, 92, 1823, 4, 1737, 125, 1747, 200, 1861, 202, 1873, 315, 2237, 314, 2236, 197, 2558, 203, 2559, 103, 2556, -309, 2607, 378, 126, 270)
+
+[node name="Finish" type="Sprite2D" parent="." unique_id=1650374154]
+position = Vector2(2523.5, -227.5)
+scale = Vector2(0.072265685, 0.05664065)
+texture = ExtResource("5_usgg7")
+
+[node name="jugador" parent="." unique_id=1605844747 instance=ExtResource("3_xnej2")]
+top_level = true
+position = Vector2(354, -339)
+scale = Vector2(1, 1)
+
+[node name="Camera2D2" type="Camera2D" parent="jugador" unique_id=1792872165]
 position = Vector2(707, 86)
 zoom = Vector2(0.13, 0.13)
 script = ExtResource("4_usgg7")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="floor/CollisionPolygon2D5/jugador" unique_id=1725842141]
+[node name="CanvasLayer" type="CanvasLayer" parent="jugador" unique_id=1725842141]
 
-[node name="Label" type="Label" parent="floor/CollisionPolygon2D5/jugador/CanvasLayer" unique_id=870186409]
+[node name="Label" type="Label" parent="jugador/CanvasLayer" unique_id=870186409]
 offset_left = 217.0
 offset_top = 255.0
 offset_right = 517.0
@@ -105,15 +121,3 @@ offset_bottom = 335.0
 text = "DIAMANTES:💎"
 label_settings = SubResource("LabelSettings_6c7x5")
 metadata/_edit_use_anchors_ = true
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="floor" unique_id=923840236]
-position = Vector2(30, 6)
-polygon = PackedVector2Array(1888, -62, 1904, -46, 1916, -58, 1978, -55, 1984, -62)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floor" unique_id=408342583]
-polygon = PackedVector2Array(30, -5, 620, -4, 796, 173, 1182, 171, 1263, 92, 1737, 92, 1823, 4, 1737, 125, 1747, 200, 1861, 202, 1873, 315, 2237, 314, 2236, 197, 2558, 203, 2559, 103, 2556, -309, 2607, 378, 126, 270)
-
-[node name="Finish" type="Sprite2D" parent="." unique_id=1650374154]
-position = Vector2(2523.5, -227.5)
-scale = Vector2(0.072265685, 0.05664065)
-texture = ExtResource("5_usgg7")
