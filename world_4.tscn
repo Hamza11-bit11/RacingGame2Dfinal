@@ -48,8 +48,8 @@ sources/0 = SubResource("TileSetAtlasSource_y37hy")
 scale = Vector2(10, 10)
 
 [node name="FondoMarron" type="Sprite2D" parent="Floor" unique_id=1277842971]
-position = Vector2(6607.75, -1304)
-scale = Vector2(27.517708, 15.349138)
+position = Vector2(6679.8003, -1300.2)
+scale = Vector2(27.817917, 15.381896)
 texture = ExtResource("1_155be")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Floor" unique_id=1296874428]
@@ -67,15 +67,14 @@ polygon = PackedVector2Array(15, -323, 15, -12, 799, -15, 980, -196, 997, -194, 
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Floor" unique_id=632830607]
 visible = false
-polygon = PackedVector2Array(1397, -402, 1423, -401, 1430, -388, 1456, -386, 1457, -370, 1581, -368, 1594, -354, 1916, -354, 1925, -369, 1959, -386, 1989, -401, 2055, -451, 2091, -488, 2136, -529, 2163, -528, 1930, -341, 1586, -340, 1521, -359, 1401, -376)
+polygon = PackedVector2Array(1397, -402, 1423, -401, 1430, -388, 1456, -386, 1457, -370, 1581, -368, 1594, -354, 1916, -354, 1952.6998, -378.69998, 1991.6998, -404.3, 2036.0999, -432.49997, 2055, -451, 2091, -488, 2136, -529, 2165.2998, -529.39996, 2054.9998, -417.69998, 1930, -341, 1586, -340, 1521, -359, 1401, -376)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Floor" unique_id=329246081]
 visible = false
-polygon = PackedVector2Array(2437, -696, 2479, -688, 2486, -675, 2510, -675, 2518, -658, 2557, -658, 2564, -641, 2622, -641, 2629, -627, 2698, -625, 2706, -613, 2814, -606, 2816, -596, 2941, -593, 2949, -578, 3102, -577, 3110, -594, 3211, -594, 3219, -609, 3264, -611, 3270, -625, 3294, -624, 3301, -642, 3327, -643, 3331, -656, 3358, -657, 3366, -674, 3393, -674, 3394, -690, 3417, -703, 3445, -718, 3460, -735, 3555, -817, 3574, -850, 3587, -866, 3600, -863, 3400, -581, 2948, -563, 2430, -601)
+polygon = PackedVector2Array(2437, -696, 2479, -688, 2486, -675, 2510, -675, 2518, -658, 2557, -658, 2564, -641, 2622, -641, 2629, -627, 2698, -625, 2706, -613, 2814, -606, 2816, -596, 2941, -593, 2949, -578, 3102, -577, 3110, -594, 3224.1997, -606.89996, 3255.7998, -616.99994, 3348.6997, -660.1, 3555, -817, 3574, -850, 3587, -866, 3600, -863, 3400, -581, 2948, -563, 2430, -601)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Floor" unique_id=2145982816]
-visible = false
-polygon = PackedVector2Array(3955, -1079, 4024, -1078, 4034, -1057, 4062, -1056, 4064, -1043, 4173, -1040, 4179, -1026, 4430, -1025, 4434, -1010, 4971, -1010, 5416, -1169, 5591, -1347, 5611, -1324, 5429, -1153, 4992, -997, 4432, -999, 4182, -1013, 4073, -1030, 4030, -1047, 3953, -1062)
+polygon = PackedVector2Array(3955, -1079, 4024, -1078, 4034, -1057, 4062, -1056, 4064, -1043, 4173, -1040, 4179, -1026, 4430, -1025, 4434, -1010, 4968.8, -1010.7999, 5041.0996, -1035.2, 5115.0996, -1052.9999, 5183.9, -1075.8999, 5353.4, -1138.7999, 5437.5996, -1179.9999, 5572.1997, -1311.2, 5591.6997, -1342.8999, 5611, -1324, 5429, -1153, 5189.8, -1053.7, 4992, -997, 4432, -999, 4182, -1013, 4073, -1030, 4030, -1047, 3953, -1062)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Floor" unique_id=1048980155]
 visible = false
@@ -117,11 +116,6 @@ texture = ExtResource("3_raf2a")
 
 [node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview56" type="Sprite2D" parent="." unique_id=513576952]
 position = Vector2(4394.001, 4317)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("3_raf2a")
-
-[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview62" type="Sprite2D" parent="." unique_id=1868332484]
-position = Vector2(23493, 4140.0005)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_raf2a")
 
@@ -176,18 +170,728 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_raf2a")
 
 [node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview70" type="Sprite2D" parent="." unique_id=1047435231]
-position = Vector2(22692, 4767)
+position = Vector2(21523.002, 4296.0005)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_raf2a")
 
-[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview71" type="Sprite2D" parent="." unique_id=621192270]
-position = Vector2(27579, 3984.0005)
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview51" type="Sprite2D" parent="." unique_id=32088846]
+position = Vector2(23081.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview60" type="Sprite2D" parent="." unique_id=1328630729]
+position = Vector2(26590.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview71" type="Sprite2D" parent="." unique_id=168779671]
+position = Vector2(24797.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview52" type="Sprite2D" parent="." unique_id=1996110265]
+position = Vector2(31726.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview61" type="Sprite2D" parent="." unique_id=1137299991]
+position = Vector2(29937.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview75" type="Sprite2D" parent="." unique_id=1172559912]
+position = Vector2(28271.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview53" type="Sprite2D" parent="." unique_id=451650374]
+position = Vector2(33519.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview62" type="Sprite2D" parent="." unique_id=146868418]
+position = Vector2(37028.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview76" type="Sprite2D" parent="." unique_id=1433988050]
+position = Vector2(35235.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview54" type="Sprite2D" parent="." unique_id=36525100]
+position = Vector2(42164.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview63" type="Sprite2D" parent="." unique_id=531104118]
+position = Vector2(40375.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview77" type="Sprite2D" parent="." unique_id=751775212]
+position = Vector2(38709.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview78" type="Sprite2D" parent="." unique_id=1712189851]
+position = Vector2(43719.754, 4276.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview55" type="Sprite2D" parent="." unique_id=892512318]
+position = Vector2(45261.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview64" type="Sprite2D" parent="." unique_id=578033115]
+position = Vector2(48770.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview79" type="Sprite2D" parent="." unique_id=1500689277]
+position = Vector2(46977.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview65" type="Sprite2D" parent="." unique_id=66189281]
+position = Vector2(53906.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview66" type="Sprite2D" parent="." unique_id=1598073072]
+position = Vector2(52117.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview80" type="Sprite2D" parent="." unique_id=466926744]
+position = Vector2(50451.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview67" type="Sprite2D" parent="." unique_id=2114124566]
+position = Vector2(55699.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview81" type="Sprite2D" parent="." unique_id=1928342184]
+position = Vector2(59208.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview82" type="Sprite2D" parent="." unique_id=1790129206]
+position = Vector2(57415.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview83" type="Sprite2D" parent="." unique_id=646603509]
+position = Vector2(64344.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview84" type="Sprite2D" parent="." unique_id=1960683692]
+position = Vector2(62555.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview85" type="Sprite2D" parent="." unique_id=18478855]
+position = Vector2(60889.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview86" type="Sprite2D" parent="." unique_id=1706624360]
+position = Vector2(65899.75, 4252)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview87" type="Sprite2D" parent="." unique_id=1760991279]
+position = Vector2(67458.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview88" type="Sprite2D" parent="." unique_id=496801157]
+position = Vector2(70967.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview89" type="Sprite2D" parent="." unique_id=1030810967]
+position = Vector2(69174.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview90" type="Sprite2D" parent="." unique_id=1667107148]
+position = Vector2(76103.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview91" type="Sprite2D" parent="." unique_id=1475803314]
+position = Vector2(74314.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview92" type="Sprite2D" parent="." unique_id=311985125]
+position = Vector2(72648.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview93" type="Sprite2D" parent="." unique_id=1098239893]
+position = Vector2(77896.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview94" type="Sprite2D" parent="." unique_id=225166898]
+position = Vector2(81405.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview95" type="Sprite2D" parent="." unique_id=30493151]
+position = Vector2(79612.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview96" type="Sprite2D" parent="." unique_id=1872425358]
+position = Vector2(86541.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview97" type="Sprite2D" parent="." unique_id=198001306]
+position = Vector2(84752.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview98" type="Sprite2D" parent="." unique_id=595815013]
+position = Vector2(83086.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview99" type="Sprite2D" parent="." unique_id=1736297992]
+position = Vector2(88096.51, 4232.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview100" type="Sprite2D" parent="." unique_id=1908093915]
+position = Vector2(885.00006, 4317)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview101" type="Sprite2D" parent="." unique_id=869536328]
+position = Vector2(4394.001, 4317)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview102" type="Sprite2D" parent="." unique_id=252516744]
+position = Vector2(2601, 4317)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview103" type="Sprite2D" parent="." unique_id=842544299]
+position = Vector2(9529.999, 4317)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview104" type="Sprite2D" parent="." unique_id=982565735]
+position = Vector2(7741, 4317)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview105" type="Sprite2D" parent="." unique_id=186594179]
+position = Vector2(6075, 4317)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview106" type="Sprite2D" parent="." unique_id=825989595]
+position = Vector2(11322.749, 4317.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview107" type="Sprite2D" parent="." unique_id=1067437609]
+position = Vector2(14831.75, 4317.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview108" type="Sprite2D" parent="." unique_id=848677193]
+position = Vector2(13038.749, 4317.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview109" type="Sprite2D" parent="." unique_id=950463759]
+position = Vector2(19967.748, 4317.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview110" type="Sprite2D" parent="." unique_id=1070493704]
+position = Vector2(18178.75, 4317.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview111" type="Sprite2D" parent="." unique_id=401258881]
+position = Vector2(16512.75, 4317.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview112" type="Sprite2D" parent="." unique_id=1818883969]
+position = Vector2(21523.002, 4296.0005)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview113" type="Sprite2D" parent="." unique_id=2063232366]
+position = Vector2(23081.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview114" type="Sprite2D" parent="." unique_id=416154408]
+position = Vector2(26590.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview115" type="Sprite2D" parent="." unique_id=1508913151]
+position = Vector2(24797.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview116" type="Sprite2D" parent="." unique_id=1066951193]
+position = Vector2(31726.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview117" type="Sprite2D" parent="." unique_id=1493407395]
+position = Vector2(29937.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview118" type="Sprite2D" parent="." unique_id=1036292352]
+position = Vector2(28271.746, 4297.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview119" type="Sprite2D" parent="." unique_id=184879560]
+position = Vector2(33519.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview120" type="Sprite2D" parent="." unique_id=1593043175]
+position = Vector2(37028.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview121" type="Sprite2D" parent="." unique_id=91270547]
+position = Vector2(35235.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview152" type="Sprite2D" parent="." unique_id=1814383780]
+position = Vector2(89644.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview153" type="Sprite2D" parent="." unique_id=72539130]
+position = Vector2(93153.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview154" type="Sprite2D" parent="." unique_id=574298806]
+position = Vector2(91360.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview155" type="Sprite2D" parent="." unique_id=2034397636]
+position = Vector2(98289.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview156" type="Sprite2D" parent="." unique_id=1763485132]
+position = Vector2(96500.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview157" type="Sprite2D" parent="." unique_id=1748492785]
+position = Vector2(94834.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview158" type="Sprite2D" parent="." unique_id=23579443]
+position = Vector2(100082.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview159" type="Sprite2D" parent="." unique_id=1457666556]
+position = Vector2(103591.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview160" type="Sprite2D" parent="." unique_id=1088657191]
+position = Vector2(101798.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview161" type="Sprite2D" parent="." unique_id=86363913]
+position = Vector2(108727.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview162" type="Sprite2D" parent="." unique_id=1570335163]
+position = Vector2(106938.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview163" type="Sprite2D" parent="." unique_id=1389588232]
+position = Vector2(105272.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview164" type="Sprite2D" parent="." unique_id=1339193553]
+position = Vector2(110282.74, 4201.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview165" type="Sprite2D" parent="." unique_id=1408479515]
+position = Vector2(111841.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview166" type="Sprite2D" parent="." unique_id=2128575144]
+position = Vector2(115350.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview167" type="Sprite2D" parent="." unique_id=487958737]
+position = Vector2(113557.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview168" type="Sprite2D" parent="." unique_id=1539493763]
+position = Vector2(120486.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview169" type="Sprite2D" parent="." unique_id=2090900609]
+position = Vector2(118697.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview170" type="Sprite2D" parent="." unique_id=659850778]
+position = Vector2(117031.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview171" type="Sprite2D" parent="." unique_id=446860553]
+position = Vector2(122279.24, 4203.498)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview172" type="Sprite2D" parent="." unique_id=614304798]
+position = Vector2(125788.24, 4203.498)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview173" type="Sprite2D" parent="." unique_id=1013608950]
+position = Vector2(123995.24, 4203.498)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview174" type="Sprite2D" parent="." unique_id=1134293948]
+position = Vector2(89644.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview175" type="Sprite2D" parent="." unique_id=682220652]
+position = Vector2(93153.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview176" type="Sprite2D" parent="." unique_id=2105564920]
+position = Vector2(91360.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview177" type="Sprite2D" parent="." unique_id=1808537826]
+position = Vector2(98289.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview178" type="Sprite2D" parent="." unique_id=112613124]
+position = Vector2(96500.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview179" type="Sprite2D" parent="." unique_id=208101199]
+position = Vector2(94834.74, 4222.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview180" type="Sprite2D" parent="." unique_id=2036005986]
+position = Vector2(100082.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview181" type="Sprite2D" parent="." unique_id=420080503]
+position = Vector2(103591.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview182" type="Sprite2D" parent="." unique_id=1909374020]
+position = Vector2(101798.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview183" type="Sprite2D" parent="." unique_id=344593175]
+position = Vector2(108727.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview184" type="Sprite2D" parent="." unique_id=302621998]
+position = Vector2(106938.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview185" type="Sprite2D" parent="." unique_id=1615014862]
+position = Vector2(105272.49, 4222.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview186" type="Sprite2D" parent="." unique_id=1556442921]
+position = Vector2(110282.74, 4201.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview187" type="Sprite2D" parent="." unique_id=796366342]
+position = Vector2(111841.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview188" type="Sprite2D" parent="." unique_id=930124513]
+position = Vector2(115350.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview189" type="Sprite2D" parent="." unique_id=1228604791]
+position = Vector2(113557.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview190" type="Sprite2D" parent="." unique_id=750846235]
+position = Vector2(120486.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview191" type="Sprite2D" parent="." unique_id=653980590]
+position = Vector2(118697.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview192" type="Sprite2D" parent="." unique_id=1781491579]
+position = Vector2(117031.49, 4202.998)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview193" type="Sprite2D" parent="." unique_id=930514591]
+position = Vector2(122279.24, 4203.498)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview194" type="Sprite2D" parent="." unique_id=799238775]
+position = Vector2(125788.24, 4203.498)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview195" type="Sprite2D" parent="." unique_id=1674302755]
+position = Vector2(123995.24, 4203.498)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview196" type="Sprite2D" parent="." unique_id=1796270180]
+position = Vector2(127390.75, 4207.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview197" type="Sprite2D" parent="." unique_id=1653729039]
+position = Vector2(129183.5, 4208)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview198" type="Sprite2D" parent="." unique_id=1968662304]
+position = Vector2(132692.5, 4208)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview199" type="Sprite2D" parent="." unique_id=1920225073]
+position = Vector2(130899.5, 4208)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview200" type="Sprite2D" parent="." unique_id=1646954043]
+position = Vector2(127390.75, 4207.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview201" type="Sprite2D" parent="." unique_id=1545450417]
+position = Vector2(129183.5, 4208)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview202" type="Sprite2D" parent="." unique_id=1607936365]
+position = Vector2(132692.5, 4208)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview203" type="Sprite2D" parent="." unique_id=909430499]
+position = Vector2(130899.5, 4208)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview122" type="Sprite2D" parent="." unique_id=1443100665]
+position = Vector2(42164.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview123" type="Sprite2D" parent="." unique_id=841998431]
+position = Vector2(40375.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview124" type="Sprite2D" parent="." unique_id=357846696]
+position = Vector2(38709.5, 4297.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview125" type="Sprite2D" parent="." unique_id=962742458]
+position = Vector2(43719.754, 4276.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview126" type="Sprite2D" parent="." unique_id=644570499]
+position = Vector2(45261.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview127" type="Sprite2D" parent="." unique_id=535962812]
+position = Vector2(48770.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview128" type="Sprite2D" parent="." unique_id=724788700]
+position = Vector2(46977.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview129" type="Sprite2D" parent="." unique_id=1806597231]
+position = Vector2(53906.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview130" type="Sprite2D" parent="." unique_id=870476456]
+position = Vector2(52117.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview131" type="Sprite2D" parent="." unique_id=1490174404]
+position = Vector2(50451.742, 4273)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview132" type="Sprite2D" parent="." unique_id=344983168]
+position = Vector2(55699.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview133" type="Sprite2D" parent="." unique_id=449683612]
+position = Vector2(59208.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview134" type="Sprite2D" parent="." unique_id=1710236357]
+position = Vector2(57415.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview135" type="Sprite2D" parent="." unique_id=980878706]
+position = Vector2(64344.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview136" type="Sprite2D" parent="." unique_id=2061611712]
+position = Vector2(62555.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview137" type="Sprite2D" parent="." unique_id=760390534]
+position = Vector2(60889.492, 4273.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview138" type="Sprite2D" parent="." unique_id=1107204950]
+position = Vector2(65899.75, 4252)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview139" type="Sprite2D" parent="." unique_id=1859912431]
+position = Vector2(67458.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview140" type="Sprite2D" parent="." unique_id=396175145]
+position = Vector2(70967.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview141" type="Sprite2D" parent="." unique_id=1197015404]
+position = Vector2(69174.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview142" type="Sprite2D" parent="." unique_id=1227062555]
+position = Vector2(76103.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview143" type="Sprite2D" parent="." unique_id=401240932]
+position = Vector2(74314.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview144" type="Sprite2D" parent="." unique_id=2083873473]
+position = Vector2(72648.5, 4253.499)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview145" type="Sprite2D" parent="." unique_id=1562551198]
+position = Vector2(77896.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview146" type="Sprite2D" parent="." unique_id=1196252932]
+position = Vector2(81405.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview147" type="Sprite2D" parent="." unique_id=523257487]
+position = Vector2(79612.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview148" type="Sprite2D" parent="." unique_id=1828498559]
+position = Vector2(86541.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview149" type="Sprite2D" parent="." unique_id=1956043140]
+position = Vector2(84752.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview150" type="Sprite2D" parent="." unique_id=113180181]
+position = Vector2(83086.25, 4253.999)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_raf2a")
+
+[node name="JuegoDeCactusDibujosAnimadosTresPolosDiferentesSobreFondoTransparenteParaDiseñoDivertidoIlustraciónMarcaO377961123RemovebgPreview151" type="Sprite2D" parent="." unique_id=969799702]
+position = Vector2(88096.51, 4232.5)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_raf2a")
 
 [node name="jugador" parent="." unique_id=1605844747 instance=ExtResource("4_057w0")]
 top_level = true
-position = Vector2(276, -494)
+position = Vector2(40901, -11135)
 
 [node name="Camera2D2" type="Camera2D" parent="jugador" unique_id=19339429]
 position = Vector2(707, 86)

@@ -252,10 +252,22 @@ position = Vector2(28749.053, -4166.123)
 scale = Vector2(0.74396497, 0.7792599)
 texture = ExtResource("11_c278u")
 
-[node name="Trampaw1" type="Sprite2D" parent="." unique_id=637216281]
+[node name="Area2D2" type="Area2D" parent="." unique_id=469947420 groups=["trampas"]]
+
+[node name="Trampaw1" type="Sprite2D" parent="Area2D2" unique_id=637216281]
 position = Vector2(46929, 12902)
 rotation = 1.5707964
 scale = Vector2(3.9725275, 10.845589)
 texture = ExtResource("13_j3lq4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D2/Trampaw1" unique_id=336954073]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D2/Trampaw1/StaticBody2D" unique_id=416480817]
+position = Vector2(56.764893, -1.9360352)
+scale = Vector2(0.99999976, 1)
+polygon = PackedVector2Array(-79.1687, 14.936523, -73.37891, 19.45459, -60.79248, 19.63916, -62.554688, 15.858887, 52.485596, 14.936523, 53.49243, 20.46875, 70.3584, 28.490723, 72.37207, -28.398926, 56.261475, -19.731934, 52.989014, -14.937012, -62.554688, -15.76709, -64.56836, -20.469238, -77.65845, -19.731934)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" unique_id=1819704990 groups=["trampas"]]
+polygon = PackedVector2Array(46333, 12616, 46547, 12610, 46639, 12360, 46853, 12427, 47042, 12457, 47159, 12378, 47342, 12549, 47458, 12543, 47409, 12629, 47636, 12598, 47599, 12733, 47360, 12775, 47165, 12824, 46547, 12782, 46272, 12629)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -67,8 +67,8 @@ texture = ExtResource("6_56e56")
 [sub_resource type="TileSet" id="TileSet_n5srx"]
 sources/0 = SubResource("TileSetAtlasSource_yoy7d")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngp3s"]
-size = Vector2(481, 227)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihlj5"]
+size = Vector2(477, 405)
 
 [node name="World2" type="Node2D" unique_id=1926323199]
 script = ExtResource("1_ngp3s")
@@ -114,7 +114,6 @@ texture = ExtResource("4_eiokd")
 [node name="jugador" parent="." unique_id=1632514651 instance=ExtResource("5_ngp3s")]
 top_level = true
 position = Vector2(-104, -415)
-scale = Vector2(1, 1)
 
 [node name="Camera2D2" type="Camera2D" parent="jugador" unique_id=407919300]
 position = Vector2(707, 86)
@@ -227,23 +226,36 @@ texture = ExtResource("8_eiokd")
 position = Vector2(33481, 12168)
 texture = ExtResource("9_eiokd")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=337277422]
+[node name="Area2D" type="Area2D" parent="." unique_id=337277422 groups=["trampas"]]
 position = Vector2(32056, 12355)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=62994232]
-position = Vector2(1425.5, -274.5)
-shape = SubResource("RectangleShape2D_ngp3s")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1237706468]
+position = Vector2(1429.5, -190.5)
+shape = SubResource("RectangleShape2D_ihlj5")
 
-[node name="CapturaDesde20260408191533RemovebgPreview" type="Sprite2D" parent="." unique_id=1198024360]
-position = Vector2(3858.0005, 7588)
-rotation = 3.1415927
+[node name="Area2D2" type="Area2D" parent="." unique_id=1009764308 groups=["trampas"]]
+position = Vector2(33485.5, 12164.5)
+
+[node name="CapturaDesde20260408191533RemovebgPreview" type="Sprite2D" parent="Area2D2" unique_id=1198024360]
+position = Vector2(-29627.5, -4576.5)
+rotation = -3.1415925
 scale = Vector2(12.350508, 7.8951607)
 texture = ExtResource("14_ihlj5")
 
-[node name="CapturaDesde20260408191533RemovebgPreview2" type="Sprite2D" parent="." unique_id=1308398432]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" unique_id=142245655]
+position = Vector2(-1429.5, 190.5)
+polygon = PackedVector2Array(-28996, -4789, -28808, -5075, -27400, -5065, -27370, -4484, -28942, -4493)
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=696304842 groups=["trampas"]]
 position = Vector2(15697.999, 7257.291)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(11.21286, 7.1696076)
+
+[node name="CapturaDesde20260408191533RemovebgPreview2" type="Sprite2D" parent="Area2D3" unique_id=1308398432]
+scale = Vector2(1, 1.0000001)
 texture = ExtResource("14_ihlj5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3" unique_id=525463361]
+polygon = PackedVector2Array(62.33911, 7.4328613, 53.688354, 8.409241, 48.426514, 44.255005, 37.278564, 32.81781, 24.436157, 44.255005, 17.925781, 38.675903, 3.388916, 44.952393, -8.115723, 46.6261, -21.849976, 24.588623, -36.565186, 41.60492, -41.55945, 26.54132, -56.096313, 45.231323, -65.10388, 27.238708, -70.811646, 5.7591553, -68.31445, -38.315674, 65.46045, -34.968384)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered_world2"]
