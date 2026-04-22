@@ -146,7 +146,7 @@ texture = ExtResource("5_whh4i")
 
 [node name="jugador" parent="." unique_id=14217646 instance=ExtResource("6_71i6y")]
 top_level = true
-position = Vector2(-116, -260)
+position = Vector2(712, -139)
 
 [node name="Camera2D2" type="Camera2D" parent="jugador" unique_id=1177145475]
 position = Vector2(707, 86)
