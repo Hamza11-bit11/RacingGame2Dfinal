@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cvb8tnwdo0l5g" path="res://suelo/TrampaW5.png" id="3_q0dry"]
 [ext_resource type="PackedScene" uid="uid://c1serxxj2dyph" path="res://Carroceria.tscn" id="4_141ph"]
 [ext_resource type="Script" uid="uid://xor651st6j1e" path="res://camera_2d.gd" id="5_bb8dg"]
+[ext_resource type="Script" uid="uid://bc5ve1a3vcvbm" path="res://trampa_sistema.gd" id="5_xxcic"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cdf0a"]
 texture = ExtResource("1_mhpw0")
@@ -47,6 +48,12 @@ sources/0 = SubResource("TileSetAtlasSource_cdf0a")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vskv4"]
 size = Vector2(1854.9333, 2032.0642)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjp03"]
+size = Vector2(180.05792, 158.87534)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_141ph"]
+size = Vector2(1839.7813, 1113.7643)
+
 [node name="World5" type="Node2D" unique_id=435904355]
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1783091348]
@@ -65,27 +72,64 @@ texture = ExtResource("2_vskv4")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor" unique_id=1138961874]
 polygon = PackedVector2Array(1, 1, 607, 1, 1046, -159, 1049, -148, 611, 11, 0, 17)
 
-[node name="TrampaW5" type="Area2D" parent="." unique_id=1672530281 groups=["trampas"]]
-position = Vector2(1338, 1)
-rotation = 3.1415927
-scale = Vector2(3.4319296, 2.0668638)
-
-[node name="TrampaW6" type="Sprite2D" parent="TrampaW5" unique_id=1554101256]
-position = Vector2(-3543.4497, -230.77425)
-scale = Vector2(11.7793455, 13.09179)
-texture = ExtResource("3_q0dry")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TrampaW5" unique_id=1482947073]
-position = Vector2(-3581.0757, -362.8679)
-shape = SubResource("RectangleShape2D_vskv4")
-
 [node name="jugador" parent="." unique_id=1605844747 instance=ExtResource("4_141ph")]
 top_level = true
 position = Vector2(276, -494)
+collision_mask = 15
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 10
 
 [node name="Camera2D2" type="Camera2D" parent="jugador" unique_id=578718499]
 position = Vector2(707, 86)
 zoom = Vector2(0.13, 0.13)
 script = ExtResource("5_bb8dg")
+zoom_normal = Vector2(0.1, 0.1)
+zoom_acelerar = Vector2(0.2, 0.2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="jugador" unique_id=976764034]
+
+[node name="TrampaSistema" type="Node2D" parent="." unique_id=1227264414]
+script = ExtResource("5_xxcic")
+
+[node name="ParteAbajo" type="Node2D" parent="TrampaSistema" unique_id=61015138]
+
+[node name="TrampaW6" type="Sprite2D" parent="TrampaSistema/ParteAbajo" unique_id=1554101256]
+position = Vector2(13537.999, 2563)
+rotation = -3.1415925
+scale = Vector2(40.425884, 27.058947)
+texture = ExtResource("3_q0dry")
+offset = Vector2(0, 80)
+
+[node name="Area2D" type="Area2D" parent="TrampaSistema/ParteAbajo/TrampaW6" unique_id=870298598 groups=["trampas"]]
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrampaSistema/ParteAbajo/TrampaW6/Area2D" unique_id=1482947073]
+position = Vector2(-1.1131287, 61.49537)
+scale = Vector2(0.08489436, 0.07638377)
+shape = SubResource("RectangleShape2D_vskv4")
+
+[node name="ParteArriba" type="Node2D" parent="TrampaSistema" unique_id=1044631737]
+
+[node name="TrampaW7" type="Sprite2D" parent="TrampaSistema/ParteArriba" unique_id=1247671603]
+position = Vector2(13537.999, -7721)
+scale = Vector2(40.425884, 27.058947)
+texture = ExtResource("3_q0dry")
+offset = Vector2(3, 80)
+
+[node name="Area2D" type="Area2D" parent="TrampaSistema/ParteArriba/TrampaW7" unique_id=254419269 groups=["trampas"]]
+position = Vector2(-119.24303, -1.1232256)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrampaSistema/ParteArriba/TrampaW7/Area2D" unique_id=696182714]
+position = Vector2(123.10195, 66.72075)
+shape = SubResource("RectangleShape2D_xjp03")
+
+[node name="Activar Trampa" type="Area2D" parent="TrampaSistema/ParteArriba" unique_id=408621200]
+position = Vector2(1338, 1.000061)
+rotation = -3.1415925
+scale = Vector2(3.4319296, 2.0668638)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrampaSistema/ParteArriba/Activar Trampa" unique_id=1745254807]
+position = Vector2(-3595.3535, 1278.2664)
+shape = SubResource("RectangleShape2D_141ph")

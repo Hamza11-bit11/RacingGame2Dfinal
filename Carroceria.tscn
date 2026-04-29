@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://qj0wdtq4p6e" path="res://jugador.gd" id="1_b7wwv"]
 [ext_resource type="Texture2D" uid="uid://c7ic45x36qefd" path="res://Dodge Ram Rebel TRX/off road racing/car-body.png" id="1_pi76j"]
+[ext_resource type="PackedScene" uid="uid://2xdedf3el66u" path="res://ruedas.tscn" id="4_60s60"]
+[ext_resource type="PackedScene" uid="uid://bi8fqjwoal1cq" path="res://ruedas_atras.tscn" id="5_qs73i"]
 [ext_resource type="Texture2D" uid="uid://cagqslakvyey2" path="res://Dodge Ram Rebel TRX/off road racing/car-wheel.png" id="4_qs73i"]
 [ext_resource type="Script" uid="uid://xor651st6j1e" path="res://camera_2d.gd" id="4_y8ckc"]
 
@@ -34,6 +36,12 @@ texture = ExtResource("1_pi76j")
 position = Vector2(455, 63)
 polygon = PackedVector2Array(32, 95, 140, 93, 163, 91, 196, 93, 243, 88, 278, 88, 309, 91, 340, 82, 338, 43, 330, 40, 330, -6, 313, -23, 192, -41, 188, -35, 167, -32, 75, -80, 42, -83, -72, -81, -108, -97, -129, -71, -160, -74, -197, -52, -204, -34, -210, -18, -330, -15, -337, 12, -338, 25, -342, 59, -342, 75, -330, 80, -321, 83, -311, 82, -290, 83, -247, 83, -221, 81, -207, 81, -183, 83, -159, 90, -124, 93, -80, 96)
 
+[node name="DetectorDeMuerte" type="Area2D" parent="." unique_id=1255966714]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorDeMuerte" unique_id=461424125]
+position = Vector2(453, 66.5)
+shape = SubResource("RectangleShape2D_60s60")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1796091083]
 position = Vector2(465, 70)
 zoom = Vector2(0.13, 0.13)

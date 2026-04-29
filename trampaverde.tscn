@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://evcngi4pwepd"]
+
+[ext_resource type="Texture2D" uid="uid://b883fc3mwxvkt" path="res://Diseño_sin_título-removebg-preview(1).png" id="1_02swe"]
+[ext_resource type="Texture2D" uid="uid://b1w4egyy4al02" path="res://Diseño_sin_título_1_-removebg-preview.png" id="2_duxx6"]
+[ext_resource type="Texture2D" uid="uid://c0laa8rxp7014" path="res://Diseño_sin_título_3_-removebg-preview.png" id="3_piybm"]
+[ext_resource type="Texture2D" uid="uid://yjf8v5rxd8it" path="res://Diseño_sin_título_2_-removebg-preview.png" id="4_v0ef7"]
+[ext_resource type="Texture2D" uid="uid://dkqf7kyvyr48a" path="res://Diseño_sin_título_5_-removebg-preview.png" id="5_hgfo0"]
+[ext_resource type="Texture2D" uid="uid://lp5tdw86qs8k" path="res://Diseño_sin_título_7_-removebg-preview.png" id="6_p1mt2"]
+[ext_resource type="Texture2D" uid="uid://b5dlbiajob3t1" path="res://Diseño_sin_título-removebg-preview.png" id="7_du18a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onf11"]
+atlas = ExtResource("1_02swe")
+region = Rect2(0, 0, 226, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcjkb"]
+atlas = ExtResource("2_duxx6")
+region = Rect2(123, 25, 123, 187)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl7qj"]
+atlas = ExtResource("3_piybm")
+region = Rect2(344, 72, 171, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8smqq"]
+atlas = ExtResource("4_v0ef7")
+region = Rect2(257, 47, 128, 168)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7pcd"]
+atlas = ExtResource("5_hgfo0")
+region = Rect2(460, 78, 229, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yipsb"]
+atlas = ExtResource("6_p1mt2")
+region = Rect2(0, 222, 223, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqvy8"]
+atlas = ExtResource("7_du18a")
+region = Rect2(206, 234, 206, 117)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2gxj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onf11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcjkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl7qj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8smqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7pcd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yipsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqvy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqvy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yipsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7pcd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8smqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl7qj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcjkb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f6fju"]
+radius = 19.0
+height = 78.0
+
+[node name="Trampaverde" type="Area2D" unique_id=442374178]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2144966374]
+position = Vector2(386.25, 136)
+scale = Vector2(0.9310595, 1)
+sprite_frames = SubResource("SpriteFrames_g2gxj")
+autoplay = "default"
+frame_progress = 0.641167
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=59096930]
+position = Vector2(363, 161)
+shape = SubResource("CapsuleShape2D_f6fju")
