@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://qj0wdtq4p6e" path="res://jugador.gd" id="1_b7wwv"]
 [ext_resource type="Texture2D" uid="uid://c7ic45x36qefd" path="res://Dodge Ram Rebel TRX/off road racing/car-body.png" id="1_pi76j"]
-[ext_resource type="PackedScene" uid="uid://2xdedf3el66u" path="res://ruedas.tscn" id="4_60s60"]
-[ext_resource type="PackedScene" uid="uid://bi8fqjwoal1cq" path="res://ruedas_atras.tscn" id="5_qs73i"]
 [ext_resource type="Texture2D" uid="uid://cagqslakvyey2" path="res://Dodge Ram Rebel TRX/off road racing/car-wheel.png" id="4_qs73i"]
 [ext_resource type="Script" uid="uid://xor651st6j1e" path="res://camera_2d.gd" id="4_y8ckc"]
 
@@ -13,14 +11,14 @@ rough = true
 bounce = 2.0
 absorbent = true
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60s60"]
+size = Vector2(681.5, 192.75)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_y8ckc"]
 radius = 106.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mkugs"]
 radius = 105.11898
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_60s60"]
-size = Vector2(681.5, 192.75)
 
 [node name="jugador" type="RigidBody2D" unique_id=1605844747 groups=["jugador"]]
 position = Vector2(12, -12)
@@ -42,10 +40,16 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorDeMuerte" unique_id=461424125]
 position = Vector2(453, 66.5)
 shape = SubResource("RectangleShape2D_60s60")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DetectorDeMuerte" unique_id=923943521]
+position = Vector2(452.75, 56)
+shape = SubResource("RectangleShape2D_60s60")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1796091083]
 position = Vector2(465, 70)
 zoom = Vector2(0.13, 0.13)
 script = ExtResource("4_y8ckc")
+zoom_normal = Vector2(0.2, 0.2)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=833536406]
 z_index = 10
@@ -113,10 +117,6 @@ length = 130.0
 stiffness = 0.1
 damping = 0.01
 
-[node name="DetectorDeMuerte" type="Area2D" parent="." unique_id=1255966714]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorDeMuerte" unique_id=461424125]
-position = Vector2(452.75, 56)
-shape = SubResource("RectangleShape2D_60s60")
+[node name="DetectorDeMuerte2" type="Area2D" parent="." unique_id=1840484368]
 
 [connection signal="area_entered" from="DetectorDeMuerte" to="." method="_on_detector_de_muerte_area_entered"]

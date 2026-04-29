@@ -24,18 +24,18 @@ var ventana_tap = 0.25
 # READY
 # =====================
 func _ready():
-	# Valores de peso y gravedad (según tus ajustes de imagen)
+	# Valores de peso y gravedad
 	mass = 20
 	gravity_scale = 5
 	
-	# IMPLEMENTACIÓN DE NOMBRES ANALIZADOS:
+	# Registro de componentes de ruedas
 	if has_node("RuedasUnidas1"): ruedas.append($RuedasUnidas1)
 	if has_node("RuedasUnidas2"): ruedas.append($RuedasUnidas2)
 	
 	for r in ruedas:
 		if r is RigidBody2D:
 			r.can_sleep = false
-			# Evitar que las ruedas se bloqueen físicamente con el chasis
+			# Evitar que las ruedas choquen con el propio chasis
 			r.add_collision_exception_with(self)
 
 # =====================
@@ -48,7 +48,7 @@ func _physics_process(delta):
 	var right_hold = Input.is_action_pressed("ui_right")
 	var left = Input.is_action_pressed("ui_left")
 
-	# --- DOBLE TAP (BOOST) ---
+	# --- LÓGICA DOBLE TAP (BOOST) ---
 	if right_pressed:
 		var ahora = Time.get_ticks_msec() / 1000.0
 		if ahora - ultimo_tap < ventana_tap:
@@ -60,7 +60,7 @@ func _physics_process(delta):
 		if tiempo_boost <= 0:
 			boost_activo = false
 
-	# --- MOVIMIENTO RUEDAS ---
+	# --- TRANSMISIÓN A LAS RUEDAS ---
 	if right_hold:
 		for r in ruedas:
 			r.apply_torque_impulse(velocidad * delta * 60)
@@ -72,7 +72,7 @@ func _physics_process(delta):
 		for r in ruedas:
 			r.apply_torque_impulse(-velocidad * delta * 60)
 
-	# --- GIRO ---
+	# --- SISTEMA DE BALANCE (GIRO) ---
 	if right_hold:
 		if _en_suelo():
 			apply_torque_impulse(torque_suelo * delta)
@@ -85,12 +85,12 @@ func _physics_process(delta):
 		else:
 			apply_torque_impulse(-torque_aire * delta)
 
-	# --- ENDEREZAR ---
+	# --- SISTEMA DE EMERGENCIA (ENDEREZAR) ---
 	if not _en_suelo() and Input.is_action_pressed("enderezar") and _boca_abajo():
 		apply_torque_impulse(-rotation * fuerza_enderezar * delta)
 
 # =====================
-# FUNCIONES
+# FUNCIONES AUXILIARES
 # =====================
 
 func _activar_boost():
@@ -107,48 +107,28 @@ func _boca_abajo():
 	return angle > PI * 0.5 and angle < PI * 1.5
 
 # =====================
-# SISTEMA DE EXPLOSIÓN
+# SISTEMA DE MUERTE Y EXPLOSIÓN
 # =====================
 
-# SUSTITUYE TU FUNCIÓN DE MUERTE POR ESTA:
-
 func _on_detector_de_muerte_area_entered(area: Area2D) -> void:
-	print("🔍 He tocado un Area2D llamada: ", area.name)
-	
-	# 1. LISTA BLANCA: Cosas que NO matan al jugador
-	# Añadimos "diamante" (o como se llame tu nodo de diamante)
+	# Filtro de colisiones para evitar muertes accidentales
 	if area.name == "Activar Trampa" or "diamante" in area.name.to_lower():
-		print("🛡️ Es un objeto seguro (Activador o Diamante).")
 		return 
 	
-	# 2. Si NO es nada de lo anterior, entonces sí explota
-	print("💀 EXPLOTANDO POR: ", area.name)
 	explotar()
-	if area.is_in_group("trampas"):
-		explotar()
 
 func explotar():
 	if freeze: return
 	freeze = true
 	
-	# 1. CONGELAR LA CÁMARA (Sea cual sea la que estés usando)
-	# Obtenemos la cámara que está usando el juego en este momento
+	# 1. Fijar la cámara para que no siga al coche invisible
 	var cam = get_viewport().get_camera_2d()
 	if cam:
 		var pos_actual_cam = cam.global_position
-		cam.top_level = true # La soltamos de cualquier movimiento
+		cam.top_level = true 
 		cam.global_position = pos_actual_cam
-		print("Cámara externa congelada en: ", pos_actual_cam)
 
-	# 2. ACTIVAR ANIMACIÓN (Las partículas sí están en el coche)
-	# 1. CONGELAR CÁMARA (Restaurado)
-	if has_node("Camera2D"):
-		var cam = $Camera2D
-		var pos_cam = cam.global_position
-		cam.top_level = true
-		cam.global_position = pos_cam
-
-	# 2. ACTIVAR PARTÍCULAS
+	# 2. Generar explosión de partículas
 	if has_node("CPUParticles2D"):
 		var p = $CPUParticles2D
 		p.top_level = true
@@ -156,11 +136,10 @@ func explotar():
 		p.emitting = true
 		p.restart()
 
-	# 3. EL COCHE DESAPARECE
-	# 3. HACER DESAPARECER EL COCHE
+	# 3. Ocultar el vehículo
 	self.modulate.a = 0 
 	self.global_position = Vector2(-9999, -9999) 
 
-	# 4. REINICIAR
+	# 4. Reinicio de nivel con retardo
 	await get_tree().create_timer(1.2).timeout
 	get_tree().reload_current_scene()
