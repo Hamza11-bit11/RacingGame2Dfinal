@@ -5,10 +5,10 @@ extends RigidBody2D
 # =====================
 var ruedas = []
 
-var velocidad = 240000
-var torque_aire = 800000
-var torque_suelo = 800000
-var fuerza_enderezar = 14000000
+var velocidad = 120000
+var torque_aire = 2000000
+var torque_suelo = 500000
+var fuerza_enderezar = 20000000
 
 # 👉 BOOST REAL
 var boost_activo = false
@@ -24,17 +24,19 @@ var ventana_tap = 0.25
 # READY
 # =====================
 func _ready():
-	# Valores de peso y gravedad de tu imagen
+	# Valores de peso y gravedad (según tus ajustes de imagen)
 	mass = 20
 	gravity_scale = 5
 	
-	# Referencia a tus nodos por nombre
-	if has_node("RuedasAdelante"): ruedas.append($RuedasAdelante)
-	if has_node("RuedasAtras"): ruedas.append($RuedasAtras)
+	# IMPLEMENTACIÓN DE NOMBRES ANALIZADOS:
+	if has_node("RuedasUnidas1"): ruedas.append($RuedasUnidas1)
+	if has_node("RuedasUnidas2"): ruedas.append($RuedasUnidas2)
 	
 	for r in ruedas:
 		if r is RigidBody2D:
 			r.can_sleep = false
+			# Evitar que las ruedas se bloqueen físicamente con el chasis
+			r.add_collision_exception_with(self)
 
 # =====================
 # PHYSICS
@@ -46,7 +48,7 @@ func _physics_process(delta):
 	var right_hold = Input.is_action_pressed("ui_right")
 	var left = Input.is_action_pressed("ui_left")
 
-	# --- DOBLE TAP ---
+	# --- DOBLE TAP (BOOST) ---
 	if right_pressed:
 		var ahora = Time.get_ticks_msec() / 1000.0
 		if ahora - ultimo_tap < ventana_tap:
@@ -55,16 +57,18 @@ func _physics_process(delta):
 
 	if boost_activo:
 		tiempo_boost -= delta
-		if tiempo_boost <= 0: boost_activo = false
+		if tiempo_boost <= 0:
+			boost_activo = false
 
 	# --- MOVIMIENTO RUEDAS ---
 	if right_hold:
 		for r in ruedas:
 			r.apply_torque_impulse(velocidad * delta * 60)
+		
 		if boost_activo:
 			apply_central_impulse(transform.x * fuerza_boost * delta)
 
-	if left:
+	elif left:
 		for r in ruedas:
 			r.apply_torque_impulse(-velocidad * delta * 60)
 
@@ -107,21 +111,29 @@ func _boca_abajo():
 # =====================
 
 func _on_detector_de_muerte_area_entered(area: Area2D) -> void:
-	if area.is_in_group("trampas"):
-		explotar()
+	print("🔍 He tocado un Area2D llamada: ", area.name)
+	
+	# 1. LISTA BLANCA: Objetos que NO matan
+	if area.name == "Activar Trampa" or "diamante" in area.name.to_lower():
+		print("🛡️ Es un objeto seguro (Activador o Diamante).")
+		return 
+	
+	# 2. Si no está en lista blanca, explota
+	print("💀 EXPLOTANDO POR: ", area.name)
+	explotar()
 
 func explotar():
 	if freeze: return
 	freeze = true
 	
-	# 1. CONGELAR CÁMARA (Restaurado)
-	if has_node("Camera2D"):
-		var cam = $Camera2D
-		var pos_cam = cam.global_position
-		cam.top_level = true
-		cam.global_position = pos_cam
+	# 1. CONGELAR CÁMARA EXTERNA
+	var cam = get_viewport().get_camera_2d()
+	if cam:
+		var pos_actual_cam = cam.global_position
+		cam.top_level = true 
+		cam.global_position = pos_actual_cam
 
-	# 2. ACTIVAR ANIMACIÓN / PARTÍCULAS (Restaurado)
+	# 2. ACTIVAR PARTÍCULAS
 	if has_node("CPUParticles2D"):
 		var p = $CPUParticles2D
 		p.top_level = true
@@ -129,10 +141,10 @@ func explotar():
 		p.emitting = true
 		p.restart()
 
-	# 3. HACER DESAPARECER EL COCHE
+	# 3. DESAPARECER
 	self.modulate.a = 0 
 	self.global_position = Vector2(-9999, -9999) 
 
-	# 4. ESPERAR Y REINICIAR
+	# 4. REINICIAR
 	await get_tree().create_timer(1.2).timeout
 	get_tree().reload_current_scene()
