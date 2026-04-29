@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://2xdedf3el66u"]
 
 [ext_resource type="Texture2D" uid="uid://cagqslakvyey2" path="res://Dodge Ram Rebel TRX/off road racing/car-wheel.png" id="1_p6x0s"]
+[ext_resource type="Script" uid="uid://b16m4u8degkhp" path="res://ruedas.gd" id="1_wq2b3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k2rad"]
 radius = 82.036575
 
 [node name="RuedasAdelante" type="RigidBody2D" unique_id=2129602004]
 gravity_scale = 40.0
+script = ExtResource("1_wq2b3")
 
 [node name="CarWheel" type="Sprite2D" parent="." unique_id=1214460784]
-position = Vector2(569, 234.25)
-scale = Vector2(1.4166667, 1.3991597)
+position = Vector2(796, 272.2)
+scale = Vector2(1.6, 1.6)
 texture = ExtResource("1_p6x0s")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=642703620]
-position = Vector2(568.99994, 235.49998)
-scale = Vector2(1.0000001, 1.0000001)
+position = Vector2(797, 271.95)
+scale = Vector2(1.2, 1.2)
 shape = SubResource("CircleShape2D_k2rad")

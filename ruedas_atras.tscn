@@ -9,11 +9,11 @@ radius = 82.036575
 gravity_scale = 40.0
 
 [node name="CarWheel" type="Sprite2D" parent="." unique_id=2063041205]
-position = Vector2(202, 167.75)
-scale = Vector2(1.4166667, 1.3991597)
+position = Vector2(202, 179.2)
+scale = Vector2(1.6, 1.6)
 texture = ExtResource("1_d4es3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=286099404]
-position = Vector2(202, 167.75)
-scale = Vector2(1.0000001, 1.0000001)
+position = Vector2(202, 179.20001)
+scale = Vector2(1.2, 1.2)
 shape = SubResource("CircleShape2D_2cb0v")

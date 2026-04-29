@@ -5,17 +5,16 @@ extends RigidBody2D
 # =====================
 var ruedas = []
 
-var velocidad = 50000
-var torque_aire = 1500000
-var torque_suelo = 300000
-
-var fuerza_enderezar = 3500000
+var velocidad = 240000
+var torque_aire = 800000
+var torque_suelo = 800000
+var fuerza_enderezar = 14000000
 
 # 👉 BOOST REAL
 var boost_activo = false
 var tiempo_boost = 0.0
 var duracion_boost = 1.5
-var fuerza_boost = 60000
+var fuerza_boost = 210000
 
 # 👉 DOBLE TAP
 var ultimo_tap = 0.0
@@ -25,14 +24,22 @@ var ventana_tap = 0.25
 # READY
 # =====================
 func _ready():
-	# Asegúrate de que tus ruedas estén en el grupo "ruedas"
-	ruedas = get_tree().get_nodes_in_group("ruedas")
+	# Valores de peso y gravedad de tu imagen
+	mass = 20
+	gravity_scale = 5
+	
+	# Referencia a tus nodos por nombre
+	if has_node("RuedasAdelante"): ruedas.append($RuedasAdelante)
+	if has_node("RuedasAtras"): ruedas.append($RuedasAtras)
+	
+	for r in ruedas:
+		if r is RigidBody2D:
+			r.can_sleep = false
 
 # =====================
 # PHYSICS
 # =====================
 func _physics_process(delta):
-	# Si el coche está congelado (explotó), no procesamos el movimiento
 	if freeze: return
 
 	var right_pressed = Input.is_action_just_pressed("ui_right")
@@ -42,24 +49,18 @@ func _physics_process(delta):
 	# --- DOBLE TAP ---
 	if right_pressed:
 		var ahora = Time.get_ticks_msec() / 1000.0
-		
 		if ahora - ultimo_tap < ventana_tap:
 			_activar_boost()
-		
 		ultimo_tap = ahora
 
-	# --- BOOST TIMER ---
 	if boost_activo:
 		tiempo_boost -= delta
-		if tiempo_boost <= 0:
-			boost_activo = false
+		if tiempo_boost <= 0: boost_activo = false
 
 	# --- MOVIMIENTO RUEDAS ---
 	if right_hold:
 		for r in ruedas:
 			r.apply_torque_impulse(velocidad * delta * 60)
-
-		# 👉 BOOST REAL: empuje hacia delante del coche
 		if boost_activo:
 			apply_central_impulse(transform.x * fuerza_boost * delta)
 
@@ -94,12 +95,12 @@ func _activar_boost():
 
 func _en_suelo():
 	for r in ruedas:
-		if r.get_contact_count() > 0:
-			return true
+		if r.get_contact_count() > 0: return true
 	return false
 
 func _boca_abajo():
-	return abs(rotation) > PI * 0.5
+	var angle = posmod(rotation, TAU)
+	return angle > PI * 0.5 and angle < PI * 1.5
 
 # =====================
 # SISTEMA DE EXPLOSIÓN
@@ -119,6 +120,8 @@ func _on_detector_de_muerte_area_entered(area: Area2D) -> void:
 	# 2. Si NO es nada de lo anterior, entonces sí explota
 	print("💀 EXPLOTANDO POR: ", area.name)
 	explotar()
+	if area.is_in_group("trampas"):
+		explotar()
 
 func explotar():
 	if freeze: return
@@ -134,6 +137,14 @@ func explotar():
 		print("Cámara externa congelada en: ", pos_actual_cam)
 
 	# 2. ACTIVAR ANIMACIÓN (Las partículas sí están en el coche)
+	# 1. CONGELAR CÁMARA (Restaurado)
+	if has_node("Camera2D"):
+		var cam = $Camera2D
+		var pos_cam = cam.global_position
+		cam.top_level = true
+		cam.global_position = pos_cam
+
+	# 2. ACTIVAR ANIMACIÓN / PARTÍCULAS (Restaurado)
 	if has_node("CPUParticles2D"):
 		var p = $CPUParticles2D
 		p.top_level = true
@@ -142,6 +153,7 @@ func explotar():
 		p.restart()
 
 	# 3. EL COCHE DESAPARECE
+	# 3. HACER DESAPARECER EL COCHE
 	self.modulate.a = 0 
 	self.global_position = Vector2(-9999, -9999) 
 

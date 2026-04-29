@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c3wgb4tlalr7n"]
+
+[ext_resource type="Texture2D" uid="uid://3b0grrukjpwt" path="res://Dodge Ram Rebel TRX/off road racing/FuegoFrame1.png" id="1_lpw73"]
+[ext_resource type="Texture2D" uid="uid://dqjiave6xcaud" path="res://Dodge Ram Rebel TRX/off road racing/FuegoFrame2.png" id="2_gsr5l"]
+[ext_resource type="Texture2D" uid="uid://dgb16je8v7lt3" path="res://Dodge Ram Rebel TRX/off road racing/FuegoFrame3.png" id="3_4db07"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kgj5g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lpw73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gsr5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4db07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gsr5l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="TrailGhost" type="AnimatedSprite2D" unique_id=680476048]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_kgj5g")
+frame_progress = 0.37191045
+speed_scale = 1.5

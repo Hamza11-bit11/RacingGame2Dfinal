@@ -4,69 +4,33 @@
 [ext_resource type="Texture2D" uid="uid://c7ic45x36qefd" path="res://Dodge Ram Rebel TRX/off road racing/car-body.png" id="1_pi76j"]
 [ext_resource type="PackedScene" uid="uid://2xdedf3el66u" path="res://ruedas.tscn" id="4_60s60"]
 [ext_resource type="PackedScene" uid="uid://bi8fqjwoal1cq" path="res://ruedas_atras.tscn" id="5_qs73i"]
+[ext_resource type="Texture2D" uid="uid://cagqslakvyey2" path="res://Dodge Ram Rebel TRX/off road racing/car-wheel.png" id="4_qs73i"]
+[ext_resource type="Script" uid="uid://xor651st6j1e" path="res://camera_2d.gd" id="4_y8ckc"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qs73i"]
-bounce = 0.3
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_60s60"]
+friction = 4.0
+rough = true
+absorbent = true
 
-[sub_resource type="GDScript" id="GDScript_60s60"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mkugs"]
-bounce = 0.3
+[sub_resource type="CircleShape2D" id="CircleShape2D_mkugs"]
+radius = 105.11898
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60s60"]
-size = Vector2(684, 191)
+size = Vector2(684, 251.5)
 
 [node name="jugador" type="RigidBody2D" unique_id=1605844747 groups=["jugador"]]
+position = Vector2(12, -12)
+mass = 0.975
+physics_material_override = SubResource("PhysicsMaterial_60s60")
 script = ExtResource("1_b7wwv")
+
+[node name="CarBody" type="Sprite2D" parent="." unique_id=1930006741]
+position = Vector2(455, 63)
+texture = ExtResource("1_pi76j")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=506560175]
 position = Vector2(455, 63)
 polygon = PackedVector2Array(-147, 93, 140, 93, 163, 91, 196, 93, 243, 88, 278, 88, 309, 91, 340, 82, 338, 43, 330, 40, 330, -6, 313, -23, 192, -41, 188, -35, 167, -32, 75, -80, 42, -83, -72, -81, -108, -97, -129, -71, -160, -74, -197, -52, -204, -34, -210, -18, -330, -15, -337, 12, -336, 54, -342, 59, -342, 75, -328, 85, -318, 87, -311, 82, -290, 83, -247, 83, -221, 81, -193, 81, -183, 83, -173, 84, -161, 80, -153, 86)
-
-[node name="CarBody" type="Sprite2D" parent="CollisionPolygon2D" unique_id=1930006741]
-texture = ExtResource("1_pi76j")
-
-[node name="RuedaAdelante" parent="CollisionPolygon2D" unique_id=326598930 groups=["g_jugador", "ruedas"] instance=ExtResource("4_60s60")]
-position = Vector2(-348, -115)
-mass = 2.5
-physics_material_override = SubResource("PhysicsMaterial_qs73i")
-gravity_scale = 3.0
-
-[node name="PinTrasera2" type="PinJoint2D" parent="CollisionPolygon2D/RuedaAdelante" unique_id=1417931929]
-position = Vector2(567, 236)
-node_a = NodePath("..")
-node_b = NodePath("../../..")
-softness = 2.47
-
-[node name="DampedSpringJoint2D3" type="DampedSpringJoint2D" parent="CollisionPolygon2D/RuedaAdelante" unique_id=378975245]
-position = Vector2(567, 136)
-node_a = NodePath("../../..")
-node_b = NodePath("..")
-length = 100.0
-stiffness = 0.1
-damping = 0.01
-script = SubResource("GDScript_60s60")
-
-[node name="RuedasAtras" parent="CollisionPolygon2D" unique_id=913410060 groups=["ruedas"] instance=ExtResource("5_qs73i")]
-position = Vector2(-429, -39)
-mass = 2.5
-physics_material_override = SubResource("PhysicsMaterial_mkugs")
-gravity_scale = 3.0
-
-[node name="PinTrasera" type="PinJoint2D" parent="CollisionPolygon2D/RuedasAtras" unique_id=1675425272]
-position = Vector2(203, 169)
-node_a = NodePath("..")
-node_b = NodePath("../../..")
-softness = 2.47
-
-[node name="DampedSpringJoint2D2" type="DampedSpringJoint2D" parent="CollisionPolygon2D/RuedasAtras" unique_id=770967509]
-position = Vector2(204, 69)
-node_a = NodePath("../../..")
-node_b = NodePath("..")
-length = 100.0
-stiffness = 0.1
-damping = 0.01
-script = SubResource("GDScript_60s60")
 
 [node name="DetectorDeMuerte" type="Area2D" parent="." unique_id=1255966714]
 collision_layer = 0
@@ -74,6 +38,10 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorDeMuerte" unique_id=461424125]
 position = Vector2(453, 66.5)
 shape = SubResource("RectangleShape2D_60s60")
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1796091083]
+position = Vector2(465, 70)
+zoom = Vector2(0.13, 0.13)
+script = ExtResource("4_y8ckc")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=833536406]
 z_index = 10
@@ -90,5 +58,59 @@ initial_velocity_max = 600.0
 scale_amount_min = 40.0
 scale_amount_max = 40.0
 color = Color(0.972122, 0.19708002, 0, 1)
+
+[node name="RuedasUnidas1" type="RigidBody2D" parent="." unique_id=1320265561]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RuedasUnidas1" unique_id=1908204247]
+position = Vector2(223, 187)
+shape = SubResource("CircleShape2D_mkugs")
+
+[node name="CarWheel" type="Sprite2D" parent="RuedasUnidas1" unique_id=1586475282]
+position = Vector2(222.99998, 187)
+scale = Vector2(1.7750001, 1.7647059)
+texture = ExtResource("4_qs73i")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="RuedasUnidas1" unique_id=708999786]
+position = Vector2(223, 185)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="RuedasUnidas1" unique_id=190672513]
+position = Vector2(223, 85)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+length = 100.0
+stiffness = 0.1
+damping = 0.01
+
+[node name="RuedasUnidas2" type="RigidBody2D" parent="." unique_id=576674423]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RuedasUnidas2" unique_id=441516020]
+position = Vector2(680, 163)
+shape = SubResource("CircleShape2D_mkugs")
+
+[node name="CarWheel2" type="Sprite2D" parent="RuedasUnidas2" unique_id=2132215545]
+position = Vector2(680, 163)
+scale = Vector2(1.775, 1.765)
+texture = ExtResource("4_qs73i")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="RuedasUnidas2" unique_id=762670822]
+position = Vector2(680, 163)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="RuedasUnidas2" unique_id=433647864]
+position = Vector2(680, 59)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+length = 104.0
+stiffness = 0.1
+damping = 0.01
+
+[node name="DetectorDeMuerte" type="Area2D" parent="." unique_id=1255966714]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorDeMuerte" unique_id=461424125]
+position = Vector2(454, 94.25)
+shape = SubResource("RectangleShape2D_60s60")
 
 [connection signal="area_entered" from="DetectorDeMuerte" to="." method="_on_detector_de_muerte_area_entered"]
