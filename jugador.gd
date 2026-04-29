@@ -105,10 +105,20 @@ func _boca_abajo():
 # SISTEMA DE EXPLOSIÓN
 # =====================
 
+# SUSTITUYE TU FUNCIÓN DE MUERTE POR ESTA:
+
 func _on_detector_de_muerte_area_entered(area: Area2D) -> void:
-	# Si el área que tocamos pertenece al grupo "trampas"
-	if area.is_in_group("trampas"):
-		explotar()
+	print("🔍 He tocado un Area2D llamada: ", area.name)
+	
+	# 1. LISTA BLANCA: Cosas que NO matan al jugador
+	# Añadimos "diamante" (o como se llame tu nodo de diamante)
+	if area.name == "Activar Trampa" or "diamante" in area.name.to_lower():
+		print("🛡️ Es un objeto seguro (Activador o Diamante).")
+		return 
+	
+	# 2. Si NO es nada de lo anterior, entonces sí explota
+	print("💀 EXPLOTANDO POR: ", area.name)
+	explotar()
 
 func explotar():
 	if freeze: return

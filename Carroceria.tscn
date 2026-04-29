@@ -69,6 +69,7 @@ damping = 0.01
 script = SubResource("GDScript_60s60")
 
 [node name="DetectorDeMuerte" type="Area2D" parent="." unique_id=1255966714]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorDeMuerte" unique_id=461424125]
 position = Vector2(453, 66.5)
