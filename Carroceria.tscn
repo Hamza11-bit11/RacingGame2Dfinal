@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c7ic45x36qefd" path="res://Dodge Ram Rebel TRX/off road racing/car-body.png" id="1_pi76j"]
 [ext_resource type="Texture2D" uid="uid://cagqslakvyey2" path="res://Dodge Ram Rebel TRX/off road racing/car-wheel.png" id="4_qs73i"]
 [ext_resource type="Script" uid="uid://xor651st6j1e" path="res://camera_2d.gd" id="4_y8ckc"]
+[ext_resource type="Texture2D" uid="uid://rnik23v6am4a" path="res://Dodge Ram Rebel TRX/off road racing/car-full.png" id="5_60s60"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_60s60"]
 friction = 4.0
@@ -21,9 +22,9 @@ radius = 106.0
 radius = 105.11898
 
 [node name="jugador" type="RigidBody2D" unique_id=1605844747 groups=["jugador"]]
-position = Vector2(12, -12)
 mass = 0.975
 physics_material_override = SubResource("PhysicsMaterial_60s60")
+linear_damp = 0.4
 script = ExtResource("1_b7wwv")
 
 [node name="CarBody" type="Sprite2D" parent="." unique_id=1930006741]
@@ -35,14 +36,11 @@ position = Vector2(455, 63)
 polygon = PackedVector2Array(32, 95, 140, 93, 163, 91, 196, 93, 243, 88, 278, 88, 309, 91, 340, 82, 338, 43, 330, 40, 330, -6, 313, -23, 192, -41, 188, -35, 167, -32, 75, -80, 42, -83, -72, -81, -108, -97, -129, -71, -160, -74, -197, -52, -204, -34, -210, -18, -330, -15, -337, 12, -338, 25, -342, 59, -342, 75, -330, 80, -321, 83, -311, 82, -290, 83, -247, 83, -221, 81, -207, 81, -183, 83, -159, 90, -124, 93, -80, 96)
 
 [node name="DetectorDeMuerte" type="Area2D" parent="." unique_id=1255966714]
-collision_layer = 0
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorDeMuerte" unique_id=461424125]
-position = Vector2(453, 66.5)
-shape = SubResource("RectangleShape2D_60s60")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="DetectorDeMuerte" unique_id=923943521]
-position = Vector2(452.75, 56)
+visibility_layer = 2
+position = Vector2(459, 78)
 shape = SubResource("RectangleShape2D_60s60")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1796091083]
@@ -68,55 +66,72 @@ scale_amount_max = 40.0
 color = Color(0.972122, 0.19708002, 0, 1)
 
 [node name="RuedasUnidas1" type="RigidBody2D" parent="." unique_id=1320265561]
+linear_damp = 0.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RuedasUnidas1" unique_id=119418335]
-position = Vector2(242, 192)
+position = Vector2(220, 224)
 shape = SubResource("CircleShape2D_y8ckc")
 
 [node name="CarWheel" type="Sprite2D" parent="RuedasUnidas1" unique_id=1235950891]
-position = Vector2(242.00003, 191)
+position = Vector2(220, 220)
 scale = Vector2(1.775, 1.765)
 texture = ExtResource("4_qs73i")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="RuedasUnidas1" unique_id=708999786]
-position = Vector2(242, 192)
+position = Vector2(220, 224)
 node_a = NodePath("../..")
 node_b = NodePath("..")
 disable_collision = false
+softness = 0.3
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="RuedasUnidas1" unique_id=190672513]
-position = Vector2(242, 62)
+position = Vector2(220, 114)
 node_a = NodePath("../..")
 node_b = NodePath("..")
-length = 130.0
+length = 110.0
 stiffness = 0.1
 damping = 0.01
 
 [node name="RuedasUnidas2" type="RigidBody2D" parent="." unique_id=576674423]
+linear_damp = 0.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RuedasUnidas2" unique_id=441516020]
-position = Vector2(680, 163)
+position = Vector2(676, 214)
 shape = SubResource("CircleShape2D_mkugs")
 
 [node name="CarWheel2" type="Sprite2D" parent="RuedasUnidas2" unique_id=2132215545]
-position = Vector2(680, 163)
+position = Vector2(678, 214)
 scale = Vector2(1.775, 1.765)
 texture = ExtResource("4_qs73i")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="RuedasUnidas2" unique_id=762670822]
-position = Vector2(680, 163)
+position = Vector2(676, 214)
 node_a = NodePath("../..")
 node_b = NodePath("..")
 disable_collision = false
+softness = 0.3
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="RuedasUnidas2" unique_id=433647864]
-position = Vector2(680, 33)
+position = Vector2(676, 104)
 node_a = NodePath("../..")
 node_b = NodePath("..")
-length = 130.0
+length = 110.0
 stiffness = 0.1
 damping = 0.01
 
-[node name="DetectorDeMuerte2" type="Area2D" parent="." unique_id=1840484368]
+[node name="EfectoMuerte" type="Node2D" parent="." unique_id=399911262]
+visible = false
+
+[node name="TrozoDelantero" type="Sprite2D" parent="EfectoMuerte" unique_id=1787555578]
+position = Vector2(1375, 80)
+texture = ExtResource("5_60s60")
+region_enabled = true
+region_rect = Rect2(336.5, 0, 354.5, 257)
+
+[node name="TrozoTrasero" type="Sprite2D" parent="EfectoMuerte" unique_id=254156428]
+position = Vector2(1138, -285)
+texture = ExtResource("5_60s60")
+region_enabled = true
+region_rect = Rect2(0, 0, 341.5, 257)
 
 [connection signal="area_entered" from="DetectorDeMuerte" to="." method="_on_detector_de_muerte_area_entered"]

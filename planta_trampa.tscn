@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://bjhsa5aehjbo0"]
 
+[ext_resource type="Script" uid="uid://fulonua1384" path="res://planta_trampa.gd" id="1_b1al2"]
 [ext_resource type="Texture2D" uid="uid://c6uw0fidoklpx" path="res://imatge-removebg-preview.png" id="1_wp4m0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wp4m0"]
+radius = 14.0
+height = 28.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b1al2"]
 atlas = ExtResource("1_wp4m0")
@@ -167,7 +172,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tq0do")
 }],
-"loop": true,
+"loop": false,
 "name": &"Tragar",
 "speed": 5.0
 }, {
@@ -190,27 +195,49 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sdplw")
 }],
-"loop": true,
+"loop": false,
 "name": &"chomp",
-"speed": 5.0
+"speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wp4m0"]
-radius = 18.0
-height = 68.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp4m0"]
+size = Vector2(137, 51)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b1al2"]
+radius = 19.0
+height = 52.0
 
 [node name="PlantaTrampa" type="Area2D" unique_id=203394389 groups=["trampas"]]
+z_index = 5
+collision_layer = 4
+script = ExtResource("1_b1al2")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=519940737]
-sprite_frames = SubResource("SpriteFrames_vu0xw")
-animation = &"chomp"
-frame_progress = 0.04269358
-offset = Vector2(0, 10)
+[node name="BocaColision" type="Area2D" parent="." unique_id=440385727]
+collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1555506494]
-position = Vector2(1, 19)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BocaColision" unique_id=1555506494]
+position = Vector2(-14, 11)
 shape = SubResource("CapsuleShape2D_wp4m0")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=996997056]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=519940737]
+texture_filter = 1
+position = Vector2(10, -27)
+sprite_frames = SubResource("SpriteFrames_vu0xw")
+animation = &"Tragar"
+autoplay = "chomp"
+offset = Vector2(0, 10)
+flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=170819132]
+[node name="AreaDeteccion" type="Area2D" parent="." unique_id=996997056]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" unique_id=170819132]
+position = Vector2(-117, 17)
+shape = SubResource("RectangleShape2D_wp4m0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=476892582]
+position = Vector2(12, 25)
+shape = SubResource("CapsuleShape2D_b1al2")
+
+[connection signal="body_entered" from="BocaColision" to="." method="_on_boca_colision_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="AreaDeteccion" to="." method="_on_area_deteccion_body_entered"]

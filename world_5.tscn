@@ -102,6 +102,7 @@ texture = ExtResource("3_q0dry")
 offset = Vector2(0, 80)
 
 [node name="Area2D" type="Area2D" parent="TrampaSistema/ParteAbajo/TrampaW6" unique_id=870298598 groups=["trampas"]]
+collision_layer = 5
 collision_mask = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrampaSistema/ParteAbajo/TrampaW6/Area2D" unique_id=1482947073]
@@ -119,6 +120,7 @@ offset = Vector2(3, 80)
 
 [node name="Area2D" type="Area2D" parent="TrampaSistema/ParteArriba/TrampaW7" unique_id=254419269 groups=["trampas"]]
 position = Vector2(-119.24303, -1.1232256)
+collision_layer = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrampaSistema/ParteArriba/TrampaW7/Area2D" unique_id=696182714]
 position = Vector2(123.10195, 66.72075)

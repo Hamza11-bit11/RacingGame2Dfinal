@@ -88,6 +88,7 @@ radius = 19.0
 height = 78.0
 
 [node name="Trampaverde" type="Area2D" unique_id=442374178]
+collision_layer = 4
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2144966374]
 position = Vector2(386.25, 136)

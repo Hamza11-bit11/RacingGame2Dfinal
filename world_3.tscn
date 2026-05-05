@@ -104,7 +104,6 @@ texture = ExtResource("5_usgg7")
 [node name="jugador" parent="." unique_id=1605844747 instance=ExtResource("3_xnej2")]
 top_level = true
 position = Vector2(354, -339)
-scale = Vector2(1, 1)
 
 [node name="Camera2D2" type="Camera2D" parent="jugador" unique_id=1792872165]
 position = Vector2(707, 86)

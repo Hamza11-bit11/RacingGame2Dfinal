@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bnxo3uoa0te23"]
 
+[ext_resource type="Script" uid="uid://douu5ljtig26f" path="res://world_4.gd" id="1_0pthf"]
 [ext_resource type="Texture2D" uid="uid://b1mpb1wxukran" path="res://FondoMarron.png" id="1_155be"]
 [ext_resource type="Texture2D" uid="uid://cbhsd5xcxmwll" path="res://suelo/tileset_desert.png" id="1_eqhq6"]
 [ext_resource type="Texture2D" uid="uid://dje4r84t261fk" path="res://juego-de-cactus-dibujos-animados-tres-polos-diferentes-sobre-fondo-transparente-para-diseño-divertido-ilustración-marca-o-377961123-removebg-preview.png" id="3_raf2a"]
@@ -44,6 +45,7 @@ texture = ExtResource("1_eqhq6")
 sources/0 = SubResource("TileSetAtlasSource_y37hy")
 
 [node name="World4" type="Node2D" unique_id=1622494145]
+script = ExtResource("1_0pthf")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1105673447]
 scale = Vector2(10, 10)
@@ -899,8 +901,6 @@ position = Vector2(334, -824)
 position = Vector2(455, 80)
 scale = Vector2(0.3, 0.3)
 script = ExtResource("5_p6hiv")
-zoom_normal = Vector2(0.1, 0.1)
-zoom_acelerar = Vector2(0.2, 0.2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="jugador" unique_id=1611419737]
 

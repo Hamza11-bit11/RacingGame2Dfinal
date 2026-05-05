@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c558iit4j65yt" path="res://suelo/foto suelo verde.png" id="8_eiokd"]
 [ext_resource type="Texture2D" uid="uid://36bas7w4ps4t" path="res://finish.png" id="9_eiokd"]
 [ext_resource type="Texture2D" uid="uid://co8l8scdkw0vt" path="res://suelo/Captura_desde_2026-04-08_19-15-33-removebg-preview.png" id="14_ihlj5"]
+[ext_resource type="PackedScene" uid="uid://bjhsa5aehjbo0" path="res://planta_trampa.tscn" id="15_pdx2o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_60pvi"]
 font_size = 20
@@ -260,4 +261,16 @@ texture = ExtResource("14_ihlj5")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3" unique_id=525463361]
 polygon = PackedVector2Array(62.33911, 7.4328613, 53.688354, 8.409241, 48.426514, 44.255005, 37.278564, 32.81781, 24.436157, 44.255005, 17.925781, 38.675903, 3.388916, 44.952393, -8.115723, 46.6261, -21.849976, 24.588623, -36.565186, 41.60492, -41.55945, 26.54132, -56.096313, 45.231323, -65.10388, 27.238708, -70.811646, 5.7591553, -68.31445, -38.315674, 65.46045, -34.968384)
 
+[node name="PlantaTrampa" parent="." unique_id=203394389 instance=ExtResource("15_pdx2o")]
+position = Vector2(4835, 404.00003)
+scale = Vector2(10, 10)
+
+[node name="AnimatedSprite2D" parent="PlantaTrampa" index="1" unique_id=519940737]
+position = Vector2(19.199999, 1.4999962)
+
+[node name="CollisionShape2D" parent="PlantaTrampa/AreaDeteccion" parent_id_path=PackedInt32Array(203394389, 996997056) index="0" unique_id=170819132]
+position = Vector2(-102.700005, 10.500001)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered_world2"]
+
+[editable path="PlantaTrampa"]
