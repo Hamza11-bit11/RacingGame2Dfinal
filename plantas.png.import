@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6uw0fidoklpx"
-path="res://.godot/imported/imatge-removebg-preview.png-81733330a75c9bf0c374888b252620b7.ctex"
+path="res://.godot/imported/plantas.png-e663ad8a813a1e4150c66b5218bab9dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imatge-removebg-preview.png"
-dest_files=["res://.godot/imported/imatge-removebg-preview.png-81733330a75c9bf0c374888b252620b7.ctex"]
+source_file="res://plantas.png"
+dest_files=["res://.godot/imported/plantas.png-e663ad8a813a1e4150c66b5218bab9dc.ctex"]
 
 [params]
 

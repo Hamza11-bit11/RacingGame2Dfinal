@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjhsa5aehjbo0"]
 
 [ext_resource type="Script" uid="uid://fulonua1384" path="res://planta_trampa.gd" id="1_b1al2"]
-[ext_resource type="Texture2D" uid="uid://c6uw0fidoklpx" path="res://imatge-removebg-preview.png" id="1_wp4m0"]
+[ext_resource type="Texture2D" uid="uid://c6uw0fidoklpx" path="res://plantas.png" id="1_wp4m0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wp4m0"]
 radius = 14.0
