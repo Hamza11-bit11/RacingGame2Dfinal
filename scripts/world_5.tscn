@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=4 uid="uid://dev8g60l33uvx"]
+[gd_scene format=4 uid="uid://dfncc7ciq31ww"]
 
 [ext_resource type="Texture2D" uid="uid://dlktnvxtqnicf" path="res://suelo/tileset_water.png" id="1_mhpw0"]
 [ext_resource type="Texture2D" uid="uid://kfuwgewbsbbb" path="res://suelo/SueloAgua.png" id="2_vskv4"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bt1lq7h6dosg5"]
+[gd_scene format=4 uid="uid://jg4k1fu0gsfs"]
 
 [ext_resource type="Texture2D" uid="uid://crwpmyhlfnjm0" path="res://FondoNegro.png" id="1_1ivc2"]
 [ext_resource type="Texture2D" uid="uid://byte7webcs6m3" path="res://suelo/tileset_lava.png" id="1_bdyje"]

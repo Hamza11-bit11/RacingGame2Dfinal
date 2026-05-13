@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=4 uid="uid://bnxo3uoa0te23"]
+[gd_scene format=4 uid="uid://62quuwxvxyw5"]
 
 [ext_resource type="Script" uid="uid://douu5ljtig26f" path="res://world_4.gd" id="1_0pthf"]
 [ext_resource type="Texture2D" uid="uid://b1mpb1wxukran" path="res://FondoMarron.png" id="1_155be"]
